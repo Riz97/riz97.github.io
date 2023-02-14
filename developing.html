@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!-- To manage incompatibility with older version of Internet Explorer / Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Life Expectancy in the World</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/init.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="padding-header">
+        <h1>Life Expectancy in the World</h1>
+        <h3>Data Visualization Final Project <br> Caprile, Marinelli, Piazza</h3>
+    </header>
+
+        <!-- NAVIGATION MENU -->
+        <div id="myTopnav" class="topnav stickyNav">
+            <div class="content">
+                <a href="index.html">Home</a>
+                <a href="overview.html">Overview</a>
+                <a href="#" class="active">Developing States</a>
+                <a href="developed.html">Developed States</a>
+                <a href="comparison.html">Comparison</a>
+                <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- MAIN CONTENT -->
+        <div id="main-content" class="content">
+            
+            <!-- ASSIGNMENT 2 -->
+            <div id="developing" class="section">
+
+                <h2>Analysis of Developing Countries </h2>
+                            
+                <!-- FIRST PLOT: HISTOGRAM -->
+                <div class="subsection">
+                    <h3>Choropleth map of Developing states</h3>
+                    <p>
+                        Using the histogram, the user can visualize the distribution of a certain measurement of the trees in the whole dataset.
+                        The user can also choose the range of compression of the bins to consider for the visualization of the histogram.
+                        The general behaviour of the distributions seems to follow an asymmetrical and right skewed shape. 
+                        <br>It is possible to visualize the range and the amount of trees in each bin overing it with the mouse.
+                    </p>
+                    <p>
+                        Select the measurement you want to visualize in the histogram: 
+                        <select id="selection-histogram-measure" class="selectionBox" name="Measure" onchange="draw1()"></select>
+                    </p>
+                    <p>
+                        Select the number of bins you want to visualize in the histogram:
+                        <select id="selection-histogram-n-bins" class="selectionBox" name="N_bins" onchange="draw1()"></select>
+                    </p>
+                    <div id="histogram-tree-size" class="chart"></div>
+                </div>
+
+                <hr>
+                
+                <!-- SECOND PLOT: BOXPLOT -->
+                <div class="subsection">
+                    <h3>Grouped barplot of diseases per most populated states </h3>
+                    <p>
+                        Considering the same measurements saw before, now we visualize the boxplots of the top 5 tree species.
+                        Thanks to boxplots, we can display some descriptive statistical informations like the median, the maximimum,
+                        the minimum, and the quartiles of each distribution. Potentials outliers are plotted as individual points.
+                        For example, looking at the height, we can instantly see that <span class="font-italic">Platanus x hispanica</span>
+                        species is usually higher with respect to the other species, and more spread, lookind at the IQR.
+                        <br>It is possible to visualize the Q1, Q3, mean, and median values of each box overing it with the mouse.
+                    </p>
+                    <p>
+                        Select the measurement you want to visualize in the boxplot: 
+                        <select id="selection-boxplot-measure" class="selectionBox" name="Measure" onchange="draw2(data2)"></select>
+                    </p>
+                    <div id="boxplot-tree-size" class="chart"></div>
+                </div>
+
+                <hr>
+
+                <!-- THIRD PLOT: SCATTERPLOT -->
+                <div class="subsection">
+                    <h3>Sankey plot of diseases distribution</h3>
+                    <p>
+                        For the top 6 most populated tree species, we display a scatterplot having on the x axis the size of trees, like
+                        the height, diameter, canopy size, and leaf area, and and on the y axis the kilograms of CO&#8322; absorbed in a year.
+                        We want to discover possible correlations between these variables.
+                        <br>Moving the mouse over the single data-point, we can visualize the exact value of the selected measure and the amount of CO&#8322;
+                        absorbed by the tree, highlighting all the trees of this species.
+                    </p>
+                    <p>
+                        Select the measurement you want to visualize in the scatterplot: 
+                        <select id="selection-scatterplot-measure" class="selectionBox" name="Measure" onchange="draw3(data3)"></select>
+                    </p>
+                    <div id="scatterplot" class="chart"></div>
+                </div>
+
+            </div> 
+
+        </div> <!-- END OF MAIN CONTENT -->
+        
+        <!-- FOOTER -->
+        <footer>
+            <div class="text-center font-italic">&copy; Copyright Ornitorinco 2022</div>
+        </footer>
+
+        <!-- Put here the js for the chart -->
+        <script src="js/assign2/assign2-plot1.js"></script>
+        <script src="js/assign2/assign2-plot2.js"></script>
+        <script src="js/assign2/assign2-plot3.js"></script>
+        <script src="js/assign2/assign2-plot4.js"></script>
+        <script src="js/assign2/assign2-plot5.js"></script> 
+
+    </body>
+</html>

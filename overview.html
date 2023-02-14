@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!-- To manage incompatibility with older version of Internet Explorer / Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Life Expectancy in the World</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/init.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="padding-header">
+        <h1>Life Expectancy in the World</h1>
+        <h3>Data Visualization Final Project <br> Caprile, Marinelli, Piazza</h3>
+    </header>
+
+
+        <!-- NAVIGATION MENU -->
+        <div id="myTopnav" class="topnav stickyNav">
+            <div class="content">
+                <a href="index.html">Home</a>
+                <a href="#" class="active">Overview</a>
+                <a href="developing.html">Developing States</a>
+                <a href="developed.html">Developed States</a>
+                <a href="comparison.html">Comparison</a>
+                <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- MAIN CONTENT -->
+        <div id="main-content" class="content">
+            
+            <!-- ASSIGNMENT 1 -->
+            <div id="overview" class="section">
+
+                <h2>General overview of the dataset</h2>
+                  
+                <!-- FIRST PLOT: BARCHART -->
+                <div class="subsection">
+                    <h3>Wordcloud of nations per life expectancy</h3>
+                    <p>
+                        We can visualize the quantity of trees by species thanks to the barchart.
+                        Since there are 224 tree species, it is reasonable to view only the 15 most numerous species.
+                        <br>Moving the mouse over the single bars, we can visualize the exact count and the average canopy size of each species.
+                    </p>
+                    <div id="barchart-abundance" class="chart"></div>
+                </div>
+
+                <hr>
+                
+                <!-- SECOND PLOT: STACKED BARCHART -->
+                <div class="subsection">
+                    <h3>Histogram of top and worst states per life expectancy</h3>
+                    <p>
+                        Now, let's analyze the amount of trees, taking into consideration the neighborhood in which they are located.
+                        The trees that did not belong to the top 5 species were grouped into the <span class="font-italic font-bold">Others</span> category.
+                        It's interesting to note that in the most numerous neighborhood, the most numerous tree species is not
+                        <span class="font-italic">Celtis australis</span>, even if it is the most numerous species among all the neighborhoods.
+                        As we can expect from the nature of the <span class="font-italic">Others</span> class, it is the most numerous in each
+                        <span class="font-italic">circoscrizione</span>.
+                        <br>Moving the mouse over a specific portion of a bar, we can visualize the exact amount of trees for the selected species in a district.
+                    </p>
+                    <div id="stacked-barchart" class="chart"></div>
+                </div>
+
+                <hr>
+
+                <!-- THIRD PLOT: SMALL MULTIPLE STACKED BARCHART -->
+                <div class="subsection">
+                    <h3>Parallel coordinates chart of alcohol consumption, life expectancy and scholarity index</h3>
+                    <p>
+                        We always analyze the number of trees in the various neighborhoods. The visualization via the small multiple
+                        stacked barchart, as it separates the tree types, help us to compare the amounts of a specific tree species with
+                        respect to the different districts they belong to. 
+                        <br>Moving the mouse over the single bars, we can visualize the exact count of each species in a district.
+                    </p>
+                    <div id="small-multiple-stacked-barchart" class="chart"></div>
+                </div>
+            </div>  
+        </div> <!-- END OF MAIN CONTENT -->
+        
+        <!-- FOOTER -->
+        <footer>
+            <div class="text-center font-italic">&copy; Copyright Ornitorinco 2022</div>
+        </footer>
+
+        <!-- Put here the js for the chart -->
+        <script src="js/assign1/assign1-plot1.js"></script>
+        <script src="js/assign1/assign1-plot2.js"></script>
+        <script src="js/assign1/assign1-plot3.js"></script>
+        <script src="js/assign1/assign1-plot4.js"></script>
+        <script src="js/assign1/assign1-plot5.js"></script>
+
+    </body>
+</html>
