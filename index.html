@@ -1,8 +1,216 @@
-<html>
-    <head>
-        <title>Benvenuto</title>
-    </head>
-    <body>
-        <div align="center">Hello World!</div>
-    </body>
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!-- To manage incompatibility with older version of Internet Explorer / Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Life Expectancy in the World</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/init.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="padding-header">
+        <h1>Life Expectancy in the World</h1>
+        <h3>Data Visualization Final Project <br> Caprile, Marinelli, Piazza</h3>
+    </header>
+
+    <!-- NAVIGATION MENU -->
+    <div id="myTopnav" class="topnav stickyNav ">
+        <div class="content">
+            <a href="#" class="active">Home</a>
+            <a href="overview.html">Overview</a>
+            <a href="developing.html">Developing States</a>
+            <a href="developed.html">Developed States</a>
+            <a href="comparison.html">Comparison</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="content">
+
+        <!-- INTRODUCTION -->
+        <div id="introduction" class="section">
+            <h2>Introduction: <span>Life Expectancy in the World</span></h2>
+            <div class="img-box float-left">
+                <img src="images/Life Expectancy.webp" alt="Life Expectancy Project">
+            </div>
+            <p>
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+                ---------------------------------------------------------------------------------------------------------
+            </p>
+            <p>
+                
+
+            </p>
+        </div>
+
+        <div class="clear-fix"></div>
+        <!-- Potremmo rimuovere i paragrafi dopo che sono ridondanti con il menù -->
+        
+        <!-- FIRST ASSIGNMENT -->
+        <div id="first-assign" class="section">
+            <h2>First assignment: <span>Comparing categories</span></h2>
+            <p>
+                In this first block of visual representations, we want to compare the species of trees that are present
+                on Trento's territory.
+                We will start showing the top 15 tree species in term of abundance (absolute values). Then, we will pick
+                the top 5 ones, plus an
+                <span class="font-italic font-bold"
+                    title="This category includes all the tree species that are not part of the top 5 ones. So, don't you worry: this category will be large enough in all visualizations!">"Others"</span>
+                category which includes all the other tree species, and we will show you their abundance in each
+                <span class="font-italic font-bold"
+                    title="A circoscrizione is a well-defined portion of a territory. It could be divided in multiple circoscrizioni (like in this case!).">circoscrizione</span>
+                of Trento's territory. This comparision between circoscrizioni will be carried out using four different
+                visualizations:
+            </p>
+            <ul>
+                <li>a <span class="font-bold">stacked barchart</span>, using the abundance of each category;</li>
+                <li>a <span class="font-bold">small multiple stacked barchart</span>, using again the abundances;</li>
+                <li>a <span class="font-bold">percentage stacked barchart</span>, which will use the percent values of
+                    the abundance of each species;</li>
+                <li>and a <span class="font-bold">wafflechart</span>, which will also use the percent values.</li>
+            </ul>
+            <p>
+                All about these stuffs can be found <a href="assignment1.html">cliking here</a>!
+            </p>
+        </div>
+
+        <!-- SECOND ASSIGNMENT -->
+        <div id="second-assign" class="section">
+            <h2>Second assignment: <span>Distributions and correlations</span></h2>
+            <p>
+                Now, we have two different goals: firstly, to understand the distribution of some measurements of the
+                trees and, then, to discover
+                possible correlations between them and the specific tree species. We will begin showing the distribution
+                of some measures (like height,
+                diameter, canopy size, and leaf area) on the whole dataset of trees via histrograms. Then, we will
+                discover the distribution of those
+                variables using boxplots about the top 5 tree species on the territory. After, we will skip to a
+                two-dimensional representation using scatterplot:
+                we will discover possible correlations between the selected measures for the trees and the kilograms of
+                CO&#8322; that they can absorbe during a year.
+                The data-points will be colored with respect to the corresponding top 6 tree species. After, we will
+                split this scatterplot in a small multiple scatterplot
+                where we can find six different plots, one for each of the top 6 classes. At the end, we can find an
+                interactive bubblechart in which we compare a measurement
+                of the tree with the CO&#8322; that it can absorbe, and with its canopy size.
+            </p>
+            <p>
+                All about these representations can be found <a href="assignment2.html">clicking here</a>!
+            </p>
+        </div>
+
+        <!-- THIRD ASSIGNMENT -->
+        <div id="third-assign" class="section">
+            <h2>Third assignment: <span>Maps</span></h2>
+            <p>
+                In this third block of visual representations , we want to visualize the map of Trento divided by
+                neighborhoods , and extract some characteristics for each of them. The fields we want to compare and
+                visualize in real time are : Tree abundance , density (the amount of neighborhood space covered by
+                trees' canopy cover ) , oxygen production and the trees position.
+            </p>
+            <ul>
+                <li>a <span class="font-bold">choropleth map </span>, using the abundance of trees in each neighborhood;
+                </li>
+                <li>a <span class="font-bold">choropleth map </span>, using the density ;</li>
+                <li>a <span class="font-bold">choropleth map </span>, using the oxygen production per tree;</li>
+                <li>a <span class="font-bold">dot density map </span>, for the visualization of tree's position.</li>
+                <li>a <span class="font-bold">dot density map </span>, for the visualization of tree's position divided
+                    by top six tree type.</li>
+            </ul>
+            <p>
+                All about the maps can be found <a href="assignment3.html">clicking here</a>!
+            </p>
+        </div>
+
+         <!-- FOURTH ASSIGNMENT -->
+         <div id="fourth-assign" class="section">
+            <h2>Fourth assignment: <span>Timelines</span></h2>
+            <p>
+                In this fourth block of visual representations , we want to visualize timelines. We are going to focus on maximum , minimum and mean temperature of Salorno (a city near Trento).
+                For example  in the line chart , on the X axis we have months of a year whereas on Y axis temperatures
+            </p>
+            <ul>
+                <li>a <span class="font-bold">Linechart </span>, Combination of two line chart and a scatterplot representing the min , max and avg temperature of 8 differents years;</li>
+                <li>a <span class="font-bold">Radarchart </span>, Different kind of visualization that represents min , max and avg temperature of 8 differents years  ;</li>
+                <li>a <span class="font-bold">Ridgeline chart</span>, Ridge lines that displays min and max daily temperature of every month in a year ;</li>
+                
+                   
+            </ul>
+            <p>
+                All about the maps can be found <a href="assignment4.html">clicking here</a>!
+            </p>
+        </div>
+        <!-- FIFTH ASSIGNMENT -->
+        <div id="fifth-assign" class="section">
+            <h2>Fifth assignment: <span>Flux</span></h2>
+            <p>
+                    In the last assignment , we represented a Sankey diagram. This diagram helps us to understand which kind of tree is economically beneficial.
+            </p>
+            <ul>
+                <li>a <span class="font-bold">Sankey Diagram </span>, This is a particular chart that takes as input Carbon Storage and it represents as output the top 10 species based on the Carbon Storage,
+                then it uses the output computed before as input for the second part of the diagram and the final output will be the total Euro saved by these tress</li>
+                
+                
+                   
+            </ul>
+            <p>
+                All about the Flux can be found <a href="assignment5.html">clicking here</a>!
+            </p>
+        </div>
+
+    </div> <!-- END OF MAIN CONTENT -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="text-center font-italic">&copy; Copyright Ornitorinco 2022</div>
+    </footer>
+
+</body>
+
 </html>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!-- To manage incompatibility with older version of Internet Explorer / Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Life Expectancy in the World</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/init.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="padding-header">
+        <h1>Life Expectancy in the World</h1>
+        <h3>Data Visualization Final Project <br> Caprile, Marinelli, Piazza</h3>
+    </header>
+
+
+    <!-- NAVIGATION MENU -->
+    <div id="myTopnav" class="topnav stickyNav">
+        <div class="content">
+            <a href="index.html">Home</a>
+            <a href="overview.html">Overview</a>
+            <a href="developing.html">Developing States</a>
+            <a href="developed.html">Developed States</a>
+            <a href="#" class="active">Comparison</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="content">
+
+        <!-- ASSIGNMENT 4 -->
+        <div id="comparison" class="section">
+
+            <h2>Comparison between Developing and Developed Countries</h2>
+
+            <!-- FIRST PLOT: Linechart -->
+            <div class="subsection">
+                <h3>Timeline of life expectancy grouping by type of country</h3>
+
+                <p>
+                    This plot is a combination of three different plots : two line chart representing the minimum and maximum temperature and a scatter plot representing the mean temperature.
+                    We have considered 8 different years : 1993, 1997, 2001, 2005, 2009, 2013, 2017, 2021. Each year has a particular color. Darker shade for the color representing the maximum temperature of that year, brighter shade the minimum.
+                    Every month has a maximum , minimum and mean temperature.
+                    
+                </p>
+
+
+
+            </div>
+            <div id="linechart" class="chart"></div>
+            <hr>
+
+            <!-- SECOND PLOT - Radarchart -->
+            <div class="subsection">
+                <h3>Boxplot respect type of country with dropdown menu</h3>
+
+                <p>
+                    This a particular plot called radarchart. The months are radius of the circle and the smaller cirlces inside the principal one are representing the temperatures.
+                    As before , we have taken in consideration eight different years : 1993, 1997, 2001, 2005, 2009, 2013, 2017, 2021.
+                    For each year, we have displayed the mean temperature  in every month.
+                   
+                </p>
+
+
+
+            </div>
+            <div id="radarchart" class="chart"></div>
+            <hr>
+
+            <!-- THIRD PLOT: Ridgeline -->
+            <div class="subsection">
+                <h3>Ridgeline per type of country in different years</h3>
+
+                <p>
+                
+                The third plot of the assignement is the ridgeline. It is displayed the ridgeline for min and max daily temperature for each month in a certain year.
+                You can select the year you would like to analyze through the dropdown selection box below. Blu line is for minimum temperature and red is for maxiumum temperature. 
+                It is easy to understand with this plot that the minimum daily temperature are higher during summer months 
+                and lower during winter months.
+
+                </p>
+                
+                <p>
+                    <select id="ridgeSelection" class="selectionBox" name="Year" onchange="draw()"></select>
+                </p>
+                <div id="ridgeline" class="chart"></div>
+
+            </div>
+
+        </div>
+
+    </div> <!-- END OF MAIN CONTENT -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="text-center font-italic">&copy; Copyright Ornitorinco 2022</div>
+    </footer>
+
+    <!-- Put here the js for the chart -->
+    <script src="js/assign4/assign4-plot1.js"></script>
+    <script src="js/assign4/assign4-plot2.js"></script>
+    <script src="js/assign4/assign4-plot3.js"></script>
+
+
+</body>
+
+</html>
