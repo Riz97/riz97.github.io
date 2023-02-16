@@ -66,19 +66,22 @@
 
             <!-- SECOND PLOT - Radarchart -->
             <div class="subsection">
-                <h3>Boxplot respect type of country with dropdown menu</h3>
-
+                <h3>Grouped barplot of diseases per most populated states </h3>
                 <p>
-                    This a particular plot called radarchart. The months are radius of the circle and the smaller cirlces inside the principal one are representing the temperatures.
-                    As before , we have taken in consideration eight different years : 1993, 1997, 2001, 2005, 2009, 2013, 2017, 2021.
-                    For each year, we have displayed the mean temperature  in every month.
-                   
+                    Considering the same measurements saw before, now we visualize the boxplots of the top 5 tree species.
+                    Thanks to boxplots, we can display some descriptive statistical informations like the median, the maximimum,
+                    the minimum, and the quartiles of each distribution. Potentials outliers are plotted as individual points.
+                    For example, looking at the height, we can instantly see that <span class="font-italic">Platanus x hispanica</span>
+                    species is usually higher with respect to the other species, and more spread, lookind at the IQR.
+                    <br>It is possible to visualize the Q1, Q3, mean, and median values of each box overing it with the mouse.
                 </p>
-
-
-
+                <p>
+                    Select the measurement you want to visualize in the boxplot: 
+                    <select id="selection-boxplot-measure" class="selectionBox" name="Measure" onchange="draw2(data2)"></select>
+                </p>
+                <div id="boxplot" class="chart"></div>
             </div>
-            <div id="radarchart" class="chart"></div>
+
             <hr>
 
             <!-- THIRD PLOT: Ridgeline -->
@@ -111,9 +114,9 @@
     </footer>
 
     <!-- Put here the js for the chart -->
-    <script src="js/comparison/comparison_plot1.js"></script>
-    <!-- <script src="js/assign4/assign4-plot2.js"></script>
-    <script src="js/assign4/assign4-plot3.js"></script> -->
+    <!-- <script src="js/comparison/comparison_plot1.js"></script> -->
+    <script src="js/comparison/comparison_plot2.js"></script>
+    <script src="js/comparison/comparison_plot3.js"></script>
 
 
 </body>
