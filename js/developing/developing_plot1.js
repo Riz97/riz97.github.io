@@ -2,7 +2,7 @@ const id_ref_1 = "#developing_1"
 
 const margin_1 = { top: 20, right: 20, bottom: 70, left: 20 },
     width_1 = 1024 - margin_1.left - margin_1.right,
-    height_1 = 768 - margin_1.top - margin_1.bottom;
+    height_1 = 900 - margin_1.top - margin_1.bottom;
 
 // Scale factor on both dimensions (width and height)
 const scaleFactor_1 = 1;
@@ -47,7 +47,7 @@ svg_1.append("g")
     .attr("font-family", "Fira Sans, sans-serif")
     .attr("font-size", "12px")
     .attr("transform", `translate(${(scaleFactor_1*width_1 - legend_1_size - (margin_1.left - margin_1.right))/2},
-                                  ${height_1 - margin_1.bottom/2})`);
+                                  ${height_1 - 750- margin_1.bottom/2})`);
 
 svg_1.select(".legendThreshold")
     .append("text")
