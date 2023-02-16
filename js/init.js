@@ -27,3 +27,4 @@ const color = d3.scaleOrdinal().range(["#ff595e", "#69d9ff", "#ffca3a", "#8ac926
 //     trees.push("Others");
 //     color.domain(trees)
 // });
+
