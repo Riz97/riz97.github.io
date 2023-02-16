@@ -1,8 +1,5 @@
 // -------------------------------------------------------------------------
-// Assignment 3: Choropleth map dot density - top 6 tree species + "Others" (fifth plot)
-// We want to show the density of trees in each neighborhood 
-// ("Circoscrizione") of Trento's territory visualizing a point for each tree
-// highlighting the top 6 tree species + "Others" 
+//LINECHART
 //--------------------------------------------------------------------------
 const id_ref_1 = "#linechart";
 // set the dimensions and margin_1s of the graph
@@ -43,13 +40,13 @@ d3.csv("../../data/comparison-1.csv").then( function(data) {
     .domain([0,100])
     .range([ height_1, 0 ]);
   svg_1.append("g")
-    .call(d3.axisLeft(y).tickFormat(d => d +"°C"));
+    .call(d3.axisLeft(y).tickFormat(d => d ));
 
   // color avg
   // Create an array of countries in the dataset
   const countries = d3.group(data, d => d.Country).keys();
 
-  // Create a color scale for the countries
+  //Create a color scale for the countries
   const colorScale = d3.scaleOrdinal()
     .domain(countries)
     .range(d3.schemeCategory10);
@@ -59,14 +56,14 @@ d3.csv("../../data/comparison-1.csv").then( function(data) {
   svg_1.selectAll(".line")
       .data(sumstat)
       .join("path")
-        .attr("fill", "transparent")
+        .attr("fill", "black")
         .attr("stroke", function(d){ return colorScale(d[0]) })
         .attr("stroke-width_1", 1.5)
         .attr("d", function(d){
           return d3.line()
-            .x(function(d) { return x(d.Year); })
-            
-            .y(function(d) { return y(+d.Life_expectancy); })
+  
+            .x(function(d) { return x(+d.Year); })
+            .y(function(d) {console.log(d) ;return y(+d.Life_expectancy); })
             (d[1])
         })
        

@@ -89,16 +89,16 @@ function draw()
     // var year = selectionBox.value
     const kde = kernelDensityEstimator(kernelEpanechnikov(7), xAxis.ticks(80))
     
-    chartTitle = document.getElementById("ridgeTitle").textContent = `Min and Max temperature distribution by month of the ${year}`
+    chartTitle = document.getElementById("ridgeTitle").textContent = `Min and Max temperature distribution by month of the `
 
-    var byYear = groupBy(Year, "Year")
+    //var byYear = groupBy(Year, "Year")
     var densities = Array()
     
     for(var i = 0; i < 2; ++i)
     {
         // Non sono convintissimo che mi piaccia, ma almeno esce giusto
-        var mins = [[min -0.01, 0]].concat(kde(byYear[i+1].map(el => el.L_E_Developing)))
-        var maxs = [[min -0.01, 0]].concat(kde(byYear[i+1].map(el => el.L_E_Developed)))
+        var mins = [[min -0.01, 0]].concat(kde(el => el.L_E_Developing))
+        var maxs = [[min -0.01, 0]].concat(kde(el => el.L_E_Developed))
         mins.push([max + 0.01, 0])
         maxs.push([max + 0.01, 0])
         
