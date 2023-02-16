@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
     <script src="js/init.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+
 </head>
 
 <body>
@@ -41,32 +44,24 @@
         <!-- MAIN CONTENT -->
         <div id="main-content" class="content">
             
-            <!-- ASSIGNMENT 2 -->
-            <div id="developing" class="section">
+            <!-- ASSIGNMENT 3 -->
+        <div id="assignment-3" class="section">
 
-                <h2>Analysis of Developing Countries </h2>
-                            
-                <!-- FIRST PLOT: HISTOGRAM -->
-                <div class="subsection">
-                    <h3>Choropleth map of Developing states</h3>
-                    <p>
-                        Using the histogram, the user can visualize the distribution of a certain measurement of the trees in the whole dataset.
-                        The user can also choose the range of compression of the bins to consider for the visualization of the histogram.
-                        The general behaviour of the distributions seems to follow an asymmetrical and right skewed shape. 
-                        <br>It is possible to visualize the range and the amount of trees in each bin overing it with the mouse.
-                    </p>
-                    <p>
-                        Select the measurement you want to visualize in the histogram: 
-                        <select id="selection-histogram-measure" class="selectionBox" name="Measure" onchange="draw1()"></select>
-                    </p>
-                    <p>
-                        Select the number of bins you want to visualize in the histogram:
-                        <select id="selection-histogram-n-bins" class="selectionBox" name="N_bins" onchange="draw1()"></select>
-                    </p>
-                    <div id="histogram-tree-size" class="chart"></div>
-                </div>
+            <h2>Life Expectancy in Developing states <span>Maps</span></h2>
 
-                <hr>
+            <!-- FIRST PLOT: CHOROPLETH MAP - TREE ABUNDANCE -->
+            <div class="subsection">
+                <h3>Choropleth map - Life Expectancy</h3>
+              
+                    <p>
+                        It is possible to visualize the entire maps of Trento city divided per neighborhoods. The total number of neighborhoods is 11. In this first choropleth map we want to display
+                        the tree abundance of each neighborhood . Thanks to a green color map (light green to dark green) we can understand in which neighborhood we have the majority of trees. 
+                        In the tooltip , there's also the area of each neighborhood. For example , the greatest amount of trees is in the neighborhood called "S.Giuseppe-S.Chiara"
+                    </p>                    
+                    
+            </div>
+            <div id="developing_1" class="chart"></div>
+            <hr>
                 
                 <!-- SECOND PLOT: BOXPLOT -->
                 <div class="subsection">
@@ -98,11 +93,8 @@
                         <br>Moving the mouse over the single data-point, we can visualize the exact value of the selected measure and the amount of CO&#8322;
                         absorbed by the tree, highlighting all the trees of this species.
                     </p>
-                    <p>
-                        Select the measurement you want to visualize in the scatterplot: 
-                        <select id="selection-scatterplot-measure" class="selectionBox" name="Measure" onchange="draw3(data3)"></select>
-                    </p>
-                    <div id="scatterplot" class="chart"></div>
+                    
+                    <div id="sankey" class="chart"></div>
                 </div>
 
             </div> 
@@ -115,11 +107,7 @@
         </footer>
 
         <!-- Put here the js for the chart -->
-        <!-- <script src="js/assign2/assign2-plot1.js"></script>
-        <script src="js/assign2/assign2-plot2.js"></script>
-        <script src="js/assign2/assign2-plot3.js"></script>
-        <script src="js/assign2/assign2-plot4.js"></script>
-        <script src="js/assign2/assign2-plot5.js"></script>  -->
-
-    </body>
+        <!-- <script src="js/developing/developing-1.js"></script> -->
+        <script src="js/developing/developing-3.js"></script>
+        </body>
 </html>
