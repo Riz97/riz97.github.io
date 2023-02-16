@@ -18,6 +18,3 @@ function toggle_icon_menu_topnav() {
     }
 }
 
-// Possible other palette
-//const color = d3.scaleOrdinal().range(["#ff595e", "#ff924c", "#ffca3a", "#8ac926", "#1982c4", "#6a4c93", "#606470"])
-const color = d3.scaleOrdinal().range(["#ff595e", "#ff924c", "#8ac926", "#1982c4", "#6a4c93", "#582f0e", "#606470"])
