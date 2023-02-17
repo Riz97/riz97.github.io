@@ -22,7 +22,7 @@ const svg_1 = d3.select(id_ref_1)
                                   ${(1 - scaleFactor_1) * height_1 / 2 + margin_1.top})`);
 
 //Read the data
-d3.csv("../../data/comparison-1.csv").then( function(data) {
+d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
 
   // group the data: I want to draw one line per group
   const sumstat = d3.group(data, d => d.Country); // nest function allows to group the calculation per level of a factor

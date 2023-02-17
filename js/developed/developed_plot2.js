@@ -36,7 +36,7 @@ svg_2.append("g")
 
 // Add Y axis
 const y = d3.scaleLinear()
-  .domain([0, 100])
+  .domain([0, 90])
   .range([ height_2, 0]);
 svg_2.append("g")
   .call(d3.axisLeft(y));

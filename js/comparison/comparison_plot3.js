@@ -58,7 +58,7 @@ var min, max, xAxis, yBandAxis, yDensityAxis, byYear
 //const selectionBox = document.getElementById("ridgeSelection")
 
 
-d3.csv("../../data/comparison-3.csv").then( function (data)
+d3.csv("../../data/comparison/comparison-3.csv").then( function (data)
 {
     // for(i = 0; i < data.length; ++i)
     //     years_3.add(data[i]['year']) 
