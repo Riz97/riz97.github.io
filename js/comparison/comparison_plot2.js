@@ -307,7 +307,7 @@ function draw2() {
 }
 
 // Read the data and compute summary statistics for each Status
-d3.csv("../../data/comparison-2.csv").then(function(data) {
+d3.csv("../../data/comparison/comparison-2.csv").then(function(data) {
 
     data2 = data;
 

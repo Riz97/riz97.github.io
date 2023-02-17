@@ -77,7 +77,7 @@ const tooltip_1 = d3.select(id_ref_1)
 // Load external data and boot
 Promise.all([
 d3.json("../../data/world.geojson"),
-d3.csv("../../data/developing_plot1.csv", function(d) {
+d3.csv("../../data/developing/developing_plot1.csv", function(d) {
     data_1.set(d.Country, +d.Life_expectancy)
 })
 ]).then(function(loadData){
