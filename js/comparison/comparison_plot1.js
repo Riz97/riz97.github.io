@@ -61,9 +61,8 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
         .attr("stroke-width_1", 1.5)
         .attr("d", function(d){
           return d3.line()
-  
             .x(function(d) { return x(+d.Year); })
-            .y(function(d) {console.log(d) ;return y(+d.Life_expectancy); })
+            .y(function(d) {console.log(d.Life_expectancy) ;return y(+d.Life_expectancy); })
             (d[1])
         })
        
