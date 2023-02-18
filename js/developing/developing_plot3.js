@@ -81,7 +81,7 @@ d3.json("../../data/developing/developing-3.json").then(function(sankeydata) {
       .attr("y", function(d) { return (d.y1 + d.y0) / 2; })
       .attr("dy", "0.35em")
       .attr("text-anchor", "end")
-      .text(function(d) { return d.name; })
+      .text(function(d) { return d.name + ":"+ "\n" + format(d.value); })
     .filter(function(d) { return d.x0 < width / 2; })
       .attr("x", function(d) { return d.x1 + 6; })
       .attr("text-anchor", "start");
