@@ -1,17 +1,22 @@
 {
     "nodes":[
-    {"node":0,"name":"Carbon Storage kg [10^2]"},
-    {"node":1,"name":"Platanus x hispanica"},
-    {"node":2,"name":"Aesculus hippocastanum"},
-    {"node":3,"name":"Celtis australis"},
-    {"node":4,"name":"Tilia x europaea"},
-    {"node":5,"name":"Cedrus deodara"},
-    {"node":6,"name":"Cupressus"},
-    {"node":7,"name":"Platanus x acerifolia 'Bloodgood'"},
-    {"node":8,"name":"Robinia pseudoacacia"},
-    {"node":9,"name":"Tilia cordata"},
-    {"node":10,"name":"Sophora japonica"},
-    {"node":11,"name":"Euro Saved"}
+    {"node":0,"name":"Total Deaths"},
+    {"node":1,"name":"Sierra Leone"},
+    {"node":2,"name":"Angola"},
+    {"node":3,"name":"Central African Republic"},
+    {"node":4,"name":"Chad"},
+    {"node":5,"name":"Côte d'Ivoire"},
+    {"node":6,"name":"Lesotho"},
+    {"node":7,"name":"Nigeria"},
+    {"node":8,"name":"Somalia"},
+    {"node":9,"name":"South Sudan"},
+    {"node":10,"name":"Camerun"},
+    {"node":11,"name":"Other"},
+    {"node":12,"name":"Adult Deaths"},
+    {"node":13,"name":"Under-Five Deaths"},
+    {"node":14,"name":"Infant Deaths"},
+    {"node":15,"name":"Not-Infant Deaths"}
+
 
     ],
     "links":[

@@ -37,7 +37,7 @@ var sankey = d3.sankey()
 var path = sankey.links();
 
 // load the data
-d3.json("../../data/developing_plot3.json").then(function(sankeydata) {
+d3.json("../../data/developing/developing-3.json").then(function(sankeydata) {
 
   graph = sankey(sankeydata);
 
