@@ -27,44 +27,39 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
   // group the data: I want to draw one line per group
   const sumstat = d3.group(data, d => d.Country); // nest function allows to group the calculation per level of a factor
 
-  const years = ["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"]
+  // Add X axis --> it is a date format
   const x = d3.scaleLinear()
-  .domain([1,16])
-  .range([ 0, width_1 ]);
+    .domain(d3.extent(data, function(d) { return d.Year; }))
+    .range([ 0, width_1 ]);
   svg_1.append("g")
     .attr("transform", `translate(0, ${height_1})`)
-    .call(d3.axisBottom(x).ticks(16).tickFormat((d, i) =>years[i])); 
+    .call(d3.axisBottom(x).ticks(5));
 
   // Add Y axis
   const y = d3.scaleLinear()
-    .domain([0,100])
+    .domain([30, d3.max(data, function(d) { return +d.Life_expectancy; })])
     .range([ height_1, 0 ]);
   svg_1.append("g")
-    .call(d3.axisLeft(y).tickFormat(d => d ));
+    .call(d3.axisLeft(y));
 
-  // color avg
-  // Create an array of countries in the dataset
-  const countries = d3.group(data, d => d.Country).keys();
-
-  //Create a color scale for the countries
-  const colorScale = d3.scaleOrdinal()
-    .domain(countries)
-    .range(d3.schemeCategory10);
-
+  // color palette
+  const color = d3.scaleOrdinal()
+    .range(d3.schemeCategory10)
 
   // Draw the line
   svg_1.selectAll(".line")
       .data(sumstat)
       .join("path")
-        .attr("fill", "black")
-        .attr("stroke", function(d){ return colorScale(d[0]) })
-        .attr("stroke-width_1", 1.5)
+        .attr("fill", "none")
+        .attr("stroke", function(d){ return color(d[0]) })
+        .attr("stroke-width", 1.5)
         .attr("d", function(d){
           return d3.line()
-            .x(function(d) { return x(+d.Year); })
-            .y(function(d) { ;return y(+d.Life_expectancy); })
+            .x(function(d) { return x(d.Year); })
+            .y(function(d) { return y(+d.Life_expectancy); })
             (d[1])
         })
+
        
        
    
