@@ -131,7 +131,7 @@ const tooltip = d3.select(id_ref_3)
             // we move between near boxes (horizontally)
             .delay(1);
 
-        tooltip.html("<span class='tooltiptext'>" + "<b>Life Expectancy in  "+ d.Country+ " is : " + d.Life_expectancy + " years" + " with the population of " + Math.ceil(d.Population)  + " inhabitants" +  
+        tooltip.html("<span class='tooltiptext'>" + "<b>Life Expectancy in  "+ d.Country+ " is : " + d.Life_expectancy + " years old" + "<br> with the population of " + Math.ceil(d.Population)  + " inhabitants" +  
                      "</b><br>" + "</span>")
             .style("left", (event.pageX) + "px")
             .style("top", (event.pageY - 28) + "px");
