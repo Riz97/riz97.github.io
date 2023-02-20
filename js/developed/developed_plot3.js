@@ -31,7 +31,6 @@ const svg_3 = d3.select(id_ref_3)
 
 //Read the data
 d3.csv("../../data/developed/developed3.csv").then( function(data) {
-
     // Add X axis
     const x = d3.scaleLinear()
     .domain([0, 0])
