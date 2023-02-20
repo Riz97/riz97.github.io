@@ -21,7 +21,8 @@ const svg_1 = d3.select(id_ref_1)
     .attr("transform", `translate(${(1 - scaleFactor_1) * width_1 / 2 + margin_1.left},
                                   ${(1 - scaleFactor_1) * height_1 / 2 + margin_1.top})`);
 
-//Read the data
+//Read the data 
+//ORA CI SONO I TOP 20 PER POPOLAZIONE ma non riesco a metterli di colori diversi in base allo status
 d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
 
   // group the data: I want to draw one line per group
@@ -59,6 +60,7 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
             .y(function(d) { return y(+d.Life_expectancy); })
             (d[1])
         })
+
 
        
        
