@@ -86,7 +86,7 @@
 
             <!-- THIRD PLOT: CHOROPLETH MAP - OXYGEN PRODUCTION -->
             <div class="subsection">
-                <h3>Scatter plot with dropdown menus</h3>
+                <h3>Scatter plot</h3>
                  
                     <p>
                         In this plot we want to show the trees' oxygen production for each neighborhood. But in this case we are using a different kind of color map that goes starting from 0 to max of total
@@ -95,10 +95,28 @@
                         neighborhood there are more tree suitable for the oxygen production..
                     </p>
                    
-                <div id="scatter-developed" class="chart"></div>
+                <div id="scatterplot-developed" class="chart"></div>
                     
                 </div>
-            </div>            
+            </div>
+            <div id="circularbar-developed" class="chart"></div>
+            <hr>
+
+            <!-- THIRD PLOT: CHOROPLETH MAP - OXYGEN PRODUCTION -->
+            <div class="subsection">
+                <h3>Timeline developed countries </h3>
+                 
+                    <p>
+                        In this plot we want to show the trees' oxygen production for each neighborhood. But in this case we are using a different kind of color map that goes starting from 0 to max of total
+                        oxygen production values (white to dark blue). This plot is correlated to the others because neighborhoods with a high number of trees have a high value of oxygen production.
+                        But in this case the greatest producer of oxygen is "Centro storico piedicastello", even though it has a lower tree abundance than "S.Giuseeppe -S.Chiara". This happens probably becuase in the first
+                        neighborhood there are more tree suitable for the oxygen production..
+                    </p>
+                   
+                <div id="timeline-developed" class="chart"></div>
+                    
+                </div>
+            </div>                  
 
         </div>
 
@@ -112,7 +130,8 @@
     <!-- Put here the js for the chart -->
     <script src="js/developed/developed_plot1.js"></script>
     <script src="js/developed/developed_plot2.js"></script>
-    <!--<script src="js/developed/developed_plot3.js"></script>  -->
+    <script src="js/developed/developed_plot3.js"></script>
+    <!--<script src="js/developed/developed_plot4.js"></script>-->
     
  
 
