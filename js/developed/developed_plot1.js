@@ -69,6 +69,8 @@ svg_1.select(".legendThreshold")
 svg_1.select(".legendThreshold")
     .call(legend_1);
 
+  
+
 // Create a tooltip
 const tooltip_1 = d3.select(id_ref_1)
     .append("div")

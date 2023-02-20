@@ -42,10 +42,19 @@ d3.csv("../../data/developed/developed3.csv").then( function(data) {
 
     // Add Y axis
     const y = d3.scaleLinear()
-    .domain([0, 80000000])
+    .domain([0, 150000000])
     .range([ height_3, 0]);
     svg_3.append("g")
     .call(d3.axisLeft(y));
+
+    svg_3.append("text")
+    .attr("x", ((width_3 - (margin_3.left - margin_3.right))  / 2))             
+    .attr("y", 0 - (margin_3.top / 2) - 10)
+    .style("class", "h2")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")  
+    .style("text-decoration", "underline")  
+    .text("Relationship between Life Expectancy and Population ");
 
       // Add X axis label:
   svg_3.append("text")      // text label for the x axis
@@ -76,7 +85,7 @@ d3.csv("../../data/developed/developed3.csv").then( function(data) {
 
 //TOOLTIP
 
-const tooltip = d3.select(id_ref_2)
+const tooltip = d3.select(id_ref_3)
 .append("div")
 .attr("class", "tooltip")
 .style("font-size", "14px")
@@ -99,7 +108,7 @@ const tooltip = d3.select(id_ref_2)
     .join("circle")
         .attr("cx", function (d) { return x(d.Life_expectancy); } )
         .attr("cy", function (d) { return y(d.Population); } )
-        .attr("r", 5)
+        .attr("r", 7)
         .style("fill", "#69b3a2")
         .style("fill", function (d) { return color(d.Country) } )
         .attr("stroke", "black")
