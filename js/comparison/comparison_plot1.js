@@ -34,7 +34,7 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
     .range([ 0, width_1 ]);
   svg_1.append("g")
     .attr("transform", `translate(0, ${height_1})`)
-    .call(d3.axisBottom(x).ticks(5));
+    .call(d3.axisBottom(x).tickFormat(d3.format("d")));
 
   // Add Y axis
   const y = d3.scaleLinear()
