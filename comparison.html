@@ -29,7 +29,6 @@
     <div id="myTopnav" class="topnav stickyNav">
         <div class="content">
             <a href="index.html">Home</a>
-            <a href="overview.html">Overview</a>
             <a href="developing.html">Developing States</a>
             <a href="developed.html">Developed States</a>
             <a href="#" class="active">Comparison</a>
@@ -97,10 +96,30 @@
 
                 </p>
                 
+                
+                <div id="ridgeline" class="chart"></div>
+
+            </div>
+
+            <hr>
+
+            <!-- FOURTH PLOT: Ridgeline -->
+            <div class="subsection">
+                <h3>Ridgeline per type of country in different years</h3>
+
+                <p>
+                
+                The third plot of the assignement is the ridgeline. It is displayed the ridgeline for min and max daily temperature for each month in a certain year.
+                You can select the year you would like to analyze through the dropdown selection box below. Blu line is for minimum temperature and red is for maxiumum temperature. 
+                It is easy to understand with this plot that the minimum daily temperature are higher during summer months 
+                and lower during winter months.
+
+                </p>
+                
                 <p>
                     <select id="ridgeSelection" class="selectionBox" name="Year" onchange="draw()"></select>
                 </p>
-                <div id="ridgeline" class="chart"></div>
+                <div id="circ"></div>
 
             </div>
 
@@ -117,7 +136,7 @@
     <script src="js/comparison/comparison_plot1.js"></script>
     <script src="js/comparison/comparison_plot2.js"></script>
     <script src="js/comparison/comparison_plot3.js"></script>
-
+    <script src="js/comparison/comparison_plot4.js"></script>
 
 </body>
 
