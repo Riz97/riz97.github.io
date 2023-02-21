@@ -122,7 +122,7 @@ svg_2.selectAll("rect")
             // Added to control the fact that the tooltip disappear if
             // we move between near boxes (horizontally)
             .delay(1);
-
+      
         tooltip.html("<span class='tooltiptext'>" + "<b>Life Expectancy in  "+ d.Country+ " is : " + d.Life_expectancy + " years" + 
                      "</b><br>" + "</span>")
             .style("left", (event.pageX) + "px")
