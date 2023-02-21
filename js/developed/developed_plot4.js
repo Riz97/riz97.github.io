@@ -42,7 +42,7 @@ d3.csv("../../data/developed/developed4.csv").then (function(data) {
       .range([ 0, width_4 ]);
     svg_4.append("g")
       .attr("transform", "translate(0," + height_4 + ")")
-      .call(d3.axisBottom(x).ticks(7));
+      .call(d3.axisBottom(x).tickFormat(d3.format("d")));
 
     // Add Y axis
     const y = d3.scaleLinear()
