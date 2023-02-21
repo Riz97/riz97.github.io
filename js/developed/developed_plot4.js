@@ -51,6 +51,24 @@ d3.csv("../../data/developed/developed4.csv").then (function(data) {
     svg_4.append("g")
       .call(d3.axisLeft(y).ticks(15));
 
+
+            // Add X axis label:
+  svg_4.append("text")      // text label for the x axis
+  .attr("x", (width_3 / 2))
+  .attr("y", (height_3 - 10 +  margin_3.bottom))
+  .style("class", "h2")
+  .style("font-size", "18px")
+  .style("text-anchor", "middle")
+  .text("Years");
+
+    // Y axis label:
+svg_4.append("text")
+    .attr("text-anchor", "end")
+    .attr("transform", "rotate(-90)")
+    .attr("y", -margin_3.left + 150)
+    .attr("x", -margin_3.top - 200)
+    .text("Life Expectancy")
+
      //TOOLTIP
 
 const tooltip = d3.select(id_ref_4)
