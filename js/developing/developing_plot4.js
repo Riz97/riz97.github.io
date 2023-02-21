@@ -90,7 +90,7 @@ svg_4.append("text")
 .style("font-size", "18px")
 .attr("text-anchor", "middle")  
 .style("text-decoration", "underline")  
-.text("Timeline Life Expectancy of the Desired Developed Country");
+.text("Timeline Life Expectancy of the Desired Developing Country");
 
 
     // Initialize line with first group of the list
