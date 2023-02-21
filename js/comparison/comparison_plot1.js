@@ -43,6 +43,8 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
   svg_1.append("g")
     .call(d3.axisLeft(y));
 
+    console.log(data[1].Status)
+
   // color palette
   const color = d3.scaleOrdinal()
   .domain(["Austria","Bangladesh","Bulgaria","Brazil","Ethiopia","Germany","India","Indonesia","Italy","Netherlands","Nigeria","Pakistan","Philippines","Poland","Romania","Russian Federation","Sweden", "Switzerland", "Turkey"])
@@ -65,20 +67,21 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
       .join("path")
         .attr("fill", "none")
         .attr("stroke", function(d){ return color(d[0]) })
-        .attr("stroke-width", 1.5)
+        .attr("stroke-width", 5)
         .attr("d", function(d){
           return d3.line()
             .x(function(d) { return x(d.Year); })
             .y(function(d) { return y(+d.Life_expectancy); })
             (d[1])
         })
+        
 
-        svg_1.selectAll(".line")
+        svg_1.selectAll("path")
         .style("opacity" , 0.5)
         
             // MouseOver
             .on("mouseover", function (event, d) {
-        
+              console.log(d.Country)
                 d3.select(event.currentTarget)
                     .transition("selected")
                         .duration(300)
@@ -90,8 +93,10 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
                     // Added to control the fact that the tooltip disappear if
                     // we move between near boxes (horizontally)
                     .delay(1);
-        
-                tooltip.html("<span class='tooltiptext'>" + "<b>Life Expectancy during  " + d.Year + " <br> was " +  d.Life_expectancy  + " years old" +
+              
+                //NON CAPISCO PERCHE NEL TOOL TIP NON ESCONO IL PAESE E LO STATUS (d.country é vuoto??)
+                tooltip.html("<span class='tooltiptext'>" + "<b>Life Expectancy in  " + d.Country
+                + " <br> that is a  " +   d.Status  + " country" +
                              "</b><br>" + "</span>")
                     .style("left", (event.pageX) + "px")
                     .style("top", (event.pageY - 28) + "px");
@@ -109,4 +114,6 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
                     .duration(300)
                     .style("opacity", 0);
             });
+
+            
 })
