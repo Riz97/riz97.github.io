@@ -112,7 +112,7 @@ const tooltip = d3.select(id_ref_3)
         .style("fill", "#69b3a2")
         .style("fill", function (d) { return color(d.Country) } )
         .attr("stroke", "black")
-       
+       .attr("opacity",0.9)
 
         svg_3.selectAll("circle")
 
@@ -143,7 +143,7 @@ const tooltip = d3.select(id_ref_3)
         d3.select(event.currentTarget)
            .transition("unselected")
                 .duration(300)
-                .style("opacity", 0.5);
+                .style("opacity", 0.9);
 
         tooltip.transition("disappear-box")
             .duration(300)
