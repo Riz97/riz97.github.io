@@ -1,0 +1,353 @@
+Country,Year,Status,Life_expectancy
+Austria,2015,Developed,81.5
+Austria,2014,Developed,81.4
+Austria,2013,Developed,81.1
+Austria,2012,Developed,88.0
+Austria,2011,Developed,88.0
+Austria,2010,Developed,84.0
+Austria,2009,Developed,82.0
+Austria,2008,Developed,84.0
+Austria,2007,Developed,81.0
+Austria,2006,Developed,79.8
+Austria,2005,Developed,79.4
+Austria,2004,Developed,79.3
+Austria,2003,Developed,78.8
+Austria,2002,Developed,78.7
+Austria,2001,Developed,78.6
+Austria,2000,Developed,78.1
+Bangladesh,2015,Developing,71.8
+Bangladesh,2014,Developing,71.4
+Bangladesh,2013,Developing,71.0
+Bangladesh,2012,Developing,77.0
+Bangladesh,2011,Developing,73.0
+Bangladesh,2010,Developing,69.9
+Bangladesh,2009,Developing,69.5
+Bangladesh,2008,Developing,69.1
+Bangladesh,2007,Developing,68.6
+Bangladesh,2006,Developing,68.2
+Bangladesh,2005,Developing,67.8
+Bangladesh,2004,Developing,67.3
+Bangladesh,2003,Developing,66.8
+Bangladesh,2002,Developing,66.3
+Bangladesh,2001,Developing,65.8
+Bangladesh,2000,Developing,65.3
+Brazil,2015,Developing,75.0
+Brazil,2014,Developing,74.8
+Brazil,2013,Developing,74.7
+Brazil,2012,Developing,74.5
+Brazil,2011,Developing,74.1
+Brazil,2010,Developing,73.8
+Brazil,2009,Developing,73.6
+Brazil,2008,Developing,73.4
+Brazil,2007,Developing,73.3
+Brazil,2006,Developing,73.0
+Brazil,2005,Developing,72.7
+Brazil,2004,Developing,72.0
+Brazil,2003,Developing,71.8
+Brazil,2002,Developing,71.4
+Brazil,2001,Developing,71.0
+Brazil,2000,Developing,75.0
+Bulgaria,2015,Developed,74.5
+Bulgaria,2014,Developed,74.3
+Bulgaria,2013,Developed,74.1
+Bulgaria,2012,Developed,73.9
+Bulgaria,2011,Developed,73.7
+Bulgaria,2010,Developed,73.4
+Bulgaria,2009,Developed,73.2
+Bulgaria,2008,Developed,72.9
+Bulgaria,2007,Developed,72.6
+Bulgaria,2006,Developed,72.2
+Bulgaria,2005,Developed,72.1
+Bulgaria,2004,Developed,72.2
+Bulgaria,2003,Developed,72.0
+Bulgaria,2002,Developed,71.8
+Bulgaria,2001,Developed,71.6
+Bulgaria,2000,Developed,71.1
+Ethiopia,2015,Developing,64.8
+Ethiopia,2014,Developing,64.2
+Ethiopia,2013,Developing,63.7
+Ethiopia,2012,Developing,63.3
+Ethiopia,2011,Developing,62.6
+Ethiopia,2010,Developing,61.8
+Ethiopia,2009,Developing,68.0
+Ethiopia,2008,Developing,59.8
+Ethiopia,2007,Developing,58.5
+Ethiopia,2006,Developing,57.2
+Ethiopia,2005,Developing,56.0
+Ethiopia,2004,Developing,55.0
+Ethiopia,2003,Developing,54.0
+Ethiopia,2002,Developing,53.2
+Ethiopia,2001,Developing,52.5
+Ethiopia,2000,Developing,51.2
+Germany,2015,Developed,81.0
+Germany,2014,Developed,89.0
+Germany,2013,Developed,86.0
+Germany,2012,Developed,86.0
+Germany,2011,Developed,85.0
+Germany,2010,Developed,81.0
+Germany,2009,Developed,80.0
+Germany,2008,Developed,79.9
+Germany,2007,Developed,79.8
+Germany,2006,Developed,79.6
+Germany,2005,Developed,79.2
+Germany,2004,Developed,79.1
+Germany,2003,Developed,78.5
+Germany,2002,Developed,78.4
+Germany,2001,Developed,78.3
+Germany,2000,Developed,78.0
+India,2015,Developing,68.3
+India,2014,Developing,68.0
+India,2013,Developing,67.6
+India,2012,Developing,67.3
+India,2011,Developing,66.8
+India,2010,Developing,66.4
+India,2009,Developing,66.0
+India,2008,Developing,65.5
+India,2007,Developing,65.2
+India,2006,Developing,64.8
+India,2005,Developing,64.4
+India,2004,Developing,64.0
+India,2003,Developing,63.7
+India,2002,Developing,63.3
+India,2001,Developing,62.9
+India,2000,Developing,62.5
+Indonesia,2015,Developing,69.1
+Indonesia,2014,Developing,68.9
+Indonesia,2013,Developing,68.7
+Indonesia,2012,Developing,68.5
+Indonesia,2011,Developing,68.3
+Indonesia,2010,Developing,68.1
+Indonesia,2009,Developing,67.9
+Indonesia,2008,Developing,67.7
+Indonesia,2007,Developing,67.5
+Indonesia,2006,Developing,67.3
+Indonesia,2005,Developing,67.2
+Indonesia,2004,Developing,65.3
+Indonesia,2003,Developing,66.9
+Indonesia,2002,Developing,66.7
+Indonesia,2001,Developing,66.5
+Indonesia,2000,Developing,66.3
+Italy,2015,Developed,82.7
+Italy,2014,Developed,82.5
+Italy,2013,Developed,82.3
+Italy,2012,Developed,82.0
+Italy,2011,Developed,82.0
+Italy,2010,Developed,81.8
+Italy,2009,Developed,81.6
+Italy,2008,Developed,81.5
+Italy,2007,Developed,81.3
+Italy,2006,Developed,81.2
+Italy,2005,Developed,88.0
+Italy,2004,Developed,89.0
+Italy,2003,Developed,79.9
+Italy,2002,Developed,80.0
+Italy,2001,Developed,79.8
+Italy,2000,Developed,79.4
+Netherlands,2015,Developed,81.9
+Netherlands,2014,Developed,81.7
+Netherlands,2013,Developed,81.4
+Netherlands,2012,Developed,81.1
+Netherlands,2011,Developed,81.1
+Netherlands,2010,Developed,88.0
+Netherlands,2009,Developed,86.0
+Netherlands,2008,Developed,83.0
+Netherlands,2007,Developed,82.0
+Netherlands,2006,Developed,79.8
+Netherlands,2005,Developed,79.4
+Netherlands,2004,Developed,79.2
+Netherlands,2003,Developed,78.7
+Netherlands,2002,Developed,78.4
+Netherlands,2001,Developed,78.3
+Netherlands,2000,Developed,78.1
+Nigeria,2015,Developing,54.5
+Nigeria,2014,Developing,53.6
+Nigeria,2013,Developing,53.2
+Nigeria,2012,Developing,52.7
+Nigeria,2011,Developing,52.3
+Nigeria,2010,Developing,52.0
+Nigeria,2009,Developing,51.6
+Nigeria,2008,Developing,59.0
+Nigeria,2007,Developing,55.0
+Nigeria,2006,Developing,49.8
+Nigeria,2005,Developing,49.2
+Nigeria,2004,Developing,48.5
+Nigeria,2003,Developing,48.1
+Nigeria,2002,Developing,47.7
+Nigeria,2001,Developing,47.4
+Nigeria,2000,Developing,47.1
+Pakistan,2015,Developing,66.4
+Pakistan,2014,Developing,66.2
+Pakistan,2013,Developing,66.0
+Pakistan,2012,Developing,65.7
+Pakistan,2011,Developing,65.5
+Pakistan,2010,Developing,65.1
+Pakistan,2009,Developing,64.8
+Pakistan,2008,Developing,64.6
+Pakistan,2007,Developing,64.4
+Pakistan,2006,Developing,64.2
+Pakistan,2005,Developing,62.9
+Pakistan,2004,Developing,63.7
+Pakistan,2003,Developing,63.5
+Pakistan,2002,Developing,63.2
+Pakistan,2001,Developing,63.0
+Pakistan,2000,Developing,62.8
+Philippines,2015,Developing,68.5
+Philippines,2014,Developing,68.4
+Philippines,2013,Developing,68.1
+Philippines,2012,Developing,68.1
+Philippines,2011,Developing,68.0
+Philippines,2010,Developing,67.9
+Philippines,2009,Developing,68.0
+Philippines,2008,Developing,67.5
+Philippines,2007,Developing,67.5
+Philippines,2006,Developing,67.3
+Philippines,2005,Developing,67.0
+Philippines,2004,Developing,67.3
+Philippines,2003,Developing,67.2
+Philippines,2002,Developing,66.8
+Philippines,2001,Developing,66.8
+Philippines,2000,Developing,66.8
+Poland,2015,Developed,77.5
+Poland,2014,Developed,77.3
+Poland,2013,Developed,77.1
+Poland,2012,Developed,76.8
+Poland,2011,Developed,76.7
+Poland,2010,Developed,76.3
+Poland,2009,Developed,75.7
+Poland,2008,Developed,75.5
+Poland,2007,Developed,75.3
+Poland,2006,Developed,75.2
+Poland,2005,Developed,75.0
+Poland,2004,Developed,74.9
+Poland,2003,Developed,74.7
+Poland,2002,Developed,74.5
+Poland,2001,Developed,74.2
+Poland,2000,Developed,73.7
+Romania,2015,Developed,75.0
+Romania,2014,Developed,74.8
+Romania,2013,Developed,74.6
+Romania,2012,Developed,74.4
+Romania,2011,Developed,74.3
+Romania,2010,Developed,73.4
+Romania,2009,Developed,73.1
+Romania,2008,Developed,73.1
+Romania,2007,Developed,72.9
+Romania,2006,Developed,72.5
+Romania,2005,Developed,71.9
+Romania,2004,Developed,71.7
+Romania,2003,Developed,71.1
+Romania,2002,Developed,77.0
+Romania,2001,Developed,78.0
+Romania,2000,Developed,77.0
+Russian Federation,2015,Developing,75.0
+Russian Federation,2014,Developing,73.0
+Russian Federation,2013,Developing,70.0
+Russian Federation,2012,Developing,69.6
+Russian Federation,2011,Developing,69.4
+Russian Federation,2010,Developing,68.4
+Russian Federation,2009,Developing,68.2
+Russian Federation,2008,Developing,67.5
+Russian Federation,2007,Developing,67.3
+Russian Federation,2006,Developing,66.4
+Russian Federation,2005,Developing,65.0
+Russian Federation,2004,Developing,64.9
+Russian Federation,2003,Developing,64.6
+Russian Federation,2002,Developing,64.8
+Russian Federation,2001,Developing,65.1
+Russian Federation,2000,Developing,65.0
+Spain,2015,Developed,82.8
+Spain,2014,Developed,82.6
+Spain,2013,Developed,82.4
+Spain,2012,Developed,82.0
+Spain,2011,Developed,82.1
+Spain,2010,Developed,81.9
+Spain,2009,Developed,81.6
+Spain,2008,Developed,81.3
+Spain,2007,Developed,89.0
+Spain,2006,Developed,88.0
+Spain,2005,Developed,81.0
+Spain,2004,Developed,81.0
+Spain,2003,Developed,79.4
+Spain,2002,Developed,79.5
+Spain,2001,Developed,79.4
+Spain,2000,Developed,79.1
+Sweden,2015,Developed,82.4
+Sweden,2014,Developed,82.3
+Sweden,2013,Developed,81.9
+Sweden,2012,Developed,81.7
+Sweden,2011,Developed,81.7
+Sweden,2010,Developed,81.5
+Sweden,2009,Developed,81.4
+Sweden,2008,Developed,81.1
+Sweden,2007,Developed,89.0
+Sweden,2006,Developed,88.0
+Sweden,2005,Developed,85.0
+Sweden,2004,Developed,83.0
+Sweden,2003,Developed,82.0
+Sweden,2002,Developed,79.9
+Sweden,2001,Developed,79.8
+Sweden,2000,Developed,79.6
+Switzerland,2015,Developed,83.4
+Switzerland,2014,Developed,83.2
+Switzerland,2013,Developed,83.0
+Switzerland,2012,Developed,82.7
+Switzerland,2011,Developed,82.6
+Switzerland,2010,Developed,82.3
+Switzerland,2009,Developed,82.1
+Switzerland,2008,Developed,82.0
+Switzerland,2007,Developed,81.7
+Switzerland,2006,Developed,81.5
+Switzerland,2005,Developed,81.1
+Switzerland,2004,Developed,81.0
+Switzerland,2003,Developed,85.0
+Switzerland,2002,Developed,84.0
+Switzerland,2001,Developed,82.0
+Switzerland,2000,Developed,79.7
+Turkey,2015,Developing,75.8
+Turkey,2014,Developing,75.5
+Turkey,2013,Developing,75.2
+Turkey,2012,Developing,74.8
+Turkey,2011,Developing,74.5
+Turkey,2010,Developing,74.2
+Turkey,2009,Developing,73.9
+Turkey,2008,Developing,73.5
+Turkey,2007,Developing,73.2
+Turkey,2006,Developing,72.8
+Turkey,2005,Developing,72.4
+Turkey,2004,Developing,72.0
+Turkey,2003,Developing,71.6
+Turkey,2002,Developing,71.2
+Turkey,2001,Developing,78.0
+Turkey,2000,Developing,74.0
+AVG Developed,2000,Developed,76.803125
+AVG Developed,2001,Developed,77.128125
+AVG Developed,2002,Developed,77.546875
+AVG Developed,2003,Developed,77.940625
+AVG Developed,2004,Developed,78.384375
+AVG Developed,2005,Developed,78.590625
+AVG Developed,2006,Developed,79.13125
+AVG Developed,2007,Developed,79.3
+AVG Developed,2008,Developed,78.93125
+AVG Developed,2009,Developed,79.584375
+AVG Developed,2010,Developed,80.146875
+AVG Developed,2011,Developed,80.70625
+AVG Developed,2012,Developed,80.44375
+AVG Developed,2013,Developed,80.68125
+AVG Developed,2014,Developed,81.1375
+AVG Developed,2015,Developed,80.709375
+AVG Developing,2000,Developing,64.61986754966888
+AVG Developing,2001,Developing,65.00993377483444
+AVG Developing,2002,Developing,65.19072847682119
+AVG Developing,2003,Developing,65.2066225165563
+AVG Developing,2004,Developing,65.37086092715232
+AVG Developing,2005,Developing,66.00927152317881
+AVG Developing,2006,Developing,66.45033112582782
+AVG Developing,2007,Developing,66.86092715231788
+AVG Developing,2008,Developing,67.41390728476821
+AVG Developing,2009,Developing,67.89403973509934
+AVG Developing,2010,Developing,67.90860927152319
+AVG Developing,2011,Developing,68.52384105960265
+AVG Developing,2012,Developing,68.89801324503311
+AVG Developing,2013,Developing,69.23443708609271
+AVG Developing,2014,Developing,69.50198675496688
+AVG Developing,2015,Developing,69.69006622516557

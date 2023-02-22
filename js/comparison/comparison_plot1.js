@@ -22,8 +22,7 @@ const svg_1 = d3.select(id_ref_1)
                                   ${(1 - scaleFactor_1) * height_1 / 2 + margin_1.top})`);
 
 //Read the data 
-//ORA CI SONO I TOP 20 PER POPOLAZIONE ma non riesco a metterli di colori diversi in base allo status
-d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
+d3.csv("../../data/comparison/comparison-1_1.csv").then( function(data) {
 
   // group the data: I want to draw one line per group
   const sumstat = d3.group(data, d => d.Country); // nest function allows to group the calculation per level of a factor
@@ -42,31 +41,31 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
     .range([ height_1, 0 ]);
   svg_1.append("g")
     .call(d3.axisLeft(y));
-
-    console.log(data[1].Status)
+  
 
   // color palette
   const color = d3.scaleOrdinal()
-  .domain(["Austria","Bangladesh","Bulgaria","Brazil","Ethiopia","Germany","India","Indonesia","Italy","Netherlands","Nigeria","Pakistan","Philippines","Poland","Romania","Russian Federation","Sweden", "Switzerland", "Turkey"])
-    .range(["#00E030", "#FF0010", "#FF4010","#005020","#FF9010"])
+  .domain(["Austria","Bangladesh","Bulgaria","Brazil","Ethiopia","Germany","India","Indonesia","Italy","Netherlands","Nigeria","Pakistan","Philippines","Poland","Romania","Russian Federation","Sweden", "Switzerland","Spain", "Turkey","AVG Developed","AVG Developing"])
+  .range(["#1982c4" ,"#ff595e", "#1982c4","#ff595e", "#ff595e", "#1982c4","#ff595e", "#ff595e", "#1982c4","#1982c4", "#ff595e", "#ff595e","#ff595e", "#1982c4", "#1982c4","#ff595e", "#1982c4", "#1982c4","#1982c4", "#ff595e","#79fff3","#ff04b6"])
+
 
     const tooltip = d3.select(id_ref_1)
-.append("div")
-.attr("class", "tooltip")
-.style("font-size", "14px")
-.style("background-color", "white")
-.style("border", "solid")
-.style("border-width", "1px")
-.style("border-radius", "5px")
-.style("padding", "10px")
-.style("opacity", 0);
-
+    .append("div")
+    .attr("class", "tooltip")
+    .style("font-size", "14px")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+    .style("opacity", 0);
+ 
   // Draw the line
   svg_1.selectAll(".line")
       .data(sumstat)
       .join("path")
         .attr("fill", "none")
-        .attr("stroke", function(d){ return color(d[0]) })
+        .attr("stroke", color)
         .attr("stroke-width", 5)
         .attr("d", function(d){
           return d3.line()
@@ -75,13 +74,30 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
             (d[1])
         })
         
+    // Y axis label
+    svg_1.append("text")      // text label for the y axis
+    .attr("x", (-height_1  / 2))
+    .attr("y", -30)
+    .style("text-anchor", "middle")
+    .style("class", "h2")
+    .style("font-size", "16px")
+    .attr("transform", "rotate(-90)")
+    .text("Life Expectancy");
+
+// X axis label
+svg_1.append("text")      // text label for the x axis
+    .attr("x", (width_1 / 2))
+    .attr("y", (height_1 + margin_1.bottom)-30)
+    .style("class", "h2")
+    .style("font-size", "16px")
+    .style("text-anchor", "middle")
+    .text("Year");
 
         svg_1.selectAll("path")
         .style("opacity" , 0.5)
         
             // MouseOver
             .on("mouseover", function (event, d) {
-              console.log(d.Country)
                 d3.select(event.currentTarget)
                     .transition("selected")
                         .duration(300)
@@ -94,10 +110,8 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
                     // we move between near boxes (horizontally)
                     .delay(1);
               
-                //NON CAPISCO PERCHE NEL TOOL TIP NON ESCONO IL PAESE E LO STATUS (d.country é vuoto??)
-                tooltip.html("<span class='tooltiptext'>" + "<b>Life Expectancy in  " + d.Country
-                + " <br> that is a  " +   d.Status  + " country" +
-                             "</b><br>" + "</span>")
+                //tooltip
+                tooltip.html("<span class='tooltiptext'>" + "<b>Life Expectancy in  " + d[0]) //+ " <br> that is a  " +   d[1][0].Status  + " country" + "</b><br>" + "</span>")
                     .style("left", (event.pageX) + "px")
                     .style("top", (event.pageY - 28) + "px");
         
@@ -114,6 +128,16 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
                     .duration(300)
                     .style("opacity", 0);
             });
+  
+    // Handmade legend  "#1982c4", "#ff595e","#79fff3","#ff04b6"
+svg_1.append("circle").attr("cx",700).attr("cy",500).attr("r", 6).style("fill", "#1982c4")
+svg_1.append("circle").attr("cx",700).attr("cy",530).attr("r", 6).style("fill", "#ff595e")
+svg_1.append("circle").attr("cx",700).attr("cy",560).attr("r", 6).style("fill", "#79fff3")
+svg_1.append("circle").attr("cx",700).attr("cy",590).attr("r", 6).style("fill", "#ff04b6")
+svg_1.append("text").attr("x", 720).attr("y", 500).text("Developed").style("font-size", "15px").attr("alignment-baseline","middle").style("fill", "#1982c4")
+svg_1.append("text").attr("x", 720).attr("y", 530).text("Developing").style("font-size", "15px").attr("alignment-baseline","middle").style("fill", "#ff595e")
+svg_1.append("text").attr("x", 720).attr("y", 560).text("AVG Developed").style("font-size", "15px").attr("alignment-baseline","middle").style("fill", "#79fff3")
+svg_1.append("text").attr("x", 720).attr("y", 590).text("AVG Developing").style("font-size", "15px").attr("alignment-baseline","middle").style("fill", "#ff04b6")
 
-            
+    
 })
