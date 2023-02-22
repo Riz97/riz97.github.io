@@ -34,7 +34,7 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
     .range([ 0, width_1 ]);
   svg_1.append("g")
     .attr("transform", `translate(0, ${height_1})`)
-    .call(d3.axisBottom(x).ticks(5));
+    .call(d3.axisBottom(x).tickFormat(d3.format("d")));
 
   // Add Y axis
   const y = d3.scaleLinear()
@@ -43,9 +43,23 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
   svg_1.append("g")
     .call(d3.axisLeft(y));
 
+    console.log(data[1].Status)
+
   // color palette
   const color = d3.scaleOrdinal()
-    .range(d3.schemeCategory10)
+  .domain(["Austria","Bangladesh","Bulgaria","Brazil","Ethiopia","Germany","India","Indonesia","Italy","Netherlands","Nigeria","Pakistan","Philippines","Poland","Romania","Russian Federation","Sweden", "Switzerland", "Turkey"])
+    .range(["#00E030", "#FF0010", "#FF4010","#005020","#FF9010"])
+
+    const tooltip = d3.select(id_ref_1)
+.append("div")
+.attr("class", "tooltip")
+.style("font-size", "14px")
+.style("background-color", "white")
+.style("border", "solid")
+.style("border-width", "1px")
+.style("border-radius", "5px")
+.style("padding", "10px")
+.style("opacity", 0);
 
   // Draw the line
   svg_1.selectAll(".line")
@@ -53,19 +67,53 @@ d3.csv("../../data/comparison/comparison-1.csv").then( function(data) {
       .join("path")
         .attr("fill", "none")
         .attr("stroke", function(d){ return color(d[0]) })
-        .attr("stroke" , "black")
-        .attr("stroke-width", 1.5)
+        .attr("stroke-width", 5)
         .attr("d", function(d){
           return d3.line()
             .x(function(d) { return x(d.Year); })
             .y(function(d) { return y(+d.Life_expectancy); })
             (d[1])
         })
+        
 
+        svg_1.selectAll("path")
+        .style("opacity" , 0.5)
+        
+            // MouseOver
+            .on("mouseover", function (event, d) {
+              console.log(d.Country)
+                d3.select(event.currentTarget)
+                    .transition("selected")
+                        .duration(300)
+                        .style("opacity", 1.0);
+        
+                tooltip.transition("appear-box")
+                    .duration(300)
+                    .style("opacity", .9)
+                    // Added to control the fact that the tooltip disappear if
+                    // we move between near boxes (horizontally)
+                    .delay(1);
+              
+                //NON CAPISCO PERCHE NEL TOOL TIP NON ESCONO IL PAESE E LO STATUS (d.country é vuoto??)
+                tooltip.html("<span class='tooltiptext'>" + "<b>Life Expectancy in  " + d.Country
+                + " <br> that is a  " +   d.Status  + " country" +
+                             "</b><br>" + "</span>")
+                    .style("left", (event.pageX) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+        
+            })
+        
+            // MouseOut
+            .on("mouseout", function (event, d) {
+                d3.select(event.currentTarget)
+                   .transition("unselected")
+                        .duration(300)
+                        .style("opacity", 0.5);
+        
+                tooltip.transition("disappear-box")
+                    .duration(300)
+                    .style("opacity", 0);
+            });
 
-       
-       
-   
-    
-
+            
 })

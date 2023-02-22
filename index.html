@@ -47,40 +47,23 @@
                 <img src="images/Life Expectancy.webp" alt="Life Expectancy Project">
             </div>
             <p>
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
-                ---------------------------------------------------------------------------------------------------------
+                The term “life expectancy” refers to the number of years a person can expect to live. 
+                By definition, life expectancy is based on an estimate of the average age that members of a particular population group will be when they die.
+                An important point to bear in mind when interpreting life expectancy estimates is that very few people will die at precisely the age indicated by life expectancy, even if mortality patterns stay constant. <br> 
+                How is life expectancy calculated? <br>
+                Age-specific mortality rates are usually estimated by counting (or projecting) the number of age-specific deaths in a time interval (e.g. the number of people aged 10-15 who died in the year 2005), and dividing by the total observed 
+                (or projected) population alive at a given point within that interval (e.g. the number of people aged 10-15 alive on 1 July 2015).
+
+                To ensure that the resulting estimates of the probabilities of death within each age interval are smooth across the lifetime, it is common to use mathematical formulas, to model how the force of mortality changes within and across age intervals.
+                Once we have estimates of the fraction of people dying across age intervals, it is simple to calculate a ‘life table’ showing the evolving probabilities of survival and the corresponding life expectancies by age. 
+                The dataset considered was taken from Kaggle.com  at this link <a href="https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who"> Life Expectancy(WHO)</a> , which gives to us a statistical analysis  of factors influencing life expectancy.
+                What we would like to analyze in this project  are the differences and similiraties between developed countries and developing countries.<br>
+               A <b> Developed Country </b> :  is a sovereign state that has a high quality of life, developed economy and advanced technological infrastructure <br> relative to other less industrialized nations. 
+               Developed countries have generally more advanced post-industrial economies,  meaning the service sector provides more wealth than the industrial sector <br>
+               A <b> Developing Country</b> :  is a sovereign state with a lesser developed industrial base and a lower Human Development Index (HDI)<br> relative to other countries.  Developing countries tend to have some characteristics in common often due to their histories or geographies. 
+               <br>For example, they commonly have: lower levels of access to safe drinking water, sanitation and hygiene, energy poverty,<br> higher levels of pollution 
+               (e.g. air pollution, littering, water pollution, open defecation), higher proportions of people with tropical and infectious diseases (neglected tropical diseases), more road traffic accidents, and generally poorer quality infrastructure.
+               
             </p>
             <p>
                 
@@ -93,115 +76,77 @@
         
         <!-- FIRST ASSIGNMENT -->
         <div id="first-assign" class="section">
-            <h2>First assignment: <span>Comparing categories</span></h2>
+            <h2>First Part: <span>Analysis Developing Countries</span></h2>
             <p>
-                In this first block of visual representations, we want to compare the species of trees that are present
-                on Trento's territory.
-                We will start showing the top 15 tree species in term of abundance (absolute values). Then, we will pick
-                the top 5 ones, plus an
-                <span class="font-italic font-bold"
-                    title="This category includes all the tree species that are not part of the top 5 ones. So, don't you worry: this category will be large enough in all visualizations!">"Others"</span>
-                category which includes all the other tree species, and we will show you their abundance in each
-                <span class="font-italic font-bold"
-                    title="A circoscrizione is a well-defined portion of a territory. It could be divided in multiple circoscrizioni (like in this case!).">circoscrizione</span>
-                of Trento's territory. This comparision between circoscrizioni will be carried out using four different
-                visualizations:
+                In this first block of visual representations, we want to analyze the entire world divide per country and extract life <br>
+                expectancy only for the developing countries. <br>
+                The we want to analyze the percentage of immunization for 3 different diseases in the most populated developing countries <br>
+                The next graph it will help us to notice the diseases distribution in each country.<br>
+                In the final part , we want to visualize the trend of the life expectancy starting from year 2000 to 2015.<br>
             </p>
             <ul>
-                <li>a <span class="font-bold">stacked barchart</span>, using the abundance of each category;</li>
-                <li>a <span class="font-bold">small multiple stacked barchart</span>, using again the abundances;</li>
-                <li>a <span class="font-bold">percentage stacked barchart</span>, which will use the percent values of
-                    the abundance of each species;</li>
-                <li>and a <span class="font-bold">wafflechart</span>, which will also use the percent values.</li>
+                <li>a <span class="font-bold">Choropleth Map </span>, using Life expectancy for each country;</li>
+                <li>a <span class="font-bold">Grouped Barplot </span>, using immunization coverage among 1 year old(%);</li>
+                <li>a <span class="font-bold">Sankey Diagram </span>, using total population and different diseases;</li>
+                <li>a <span class="font-bold">Linechart </span>, using the life expectancy during  15 years.</li>
             </ul>
             <p>
-                All about these stuffs can be found <a href="assignment1.html">cliking here</a>!
+                All the information about developed countries can be found <a href="developing.html">clicking here</a>!
             </p>
         </div>
 
         <!-- SECOND ASSIGNMENT -->
         <div id="second-assign" class="section">
-            <h2>Second assignment: <span>Distributions and correlations</span></h2>
+            <h2>Second Part: <span>Analysis Developed Countries</span></h2>
             <p>
-                Now, we have two different goals: firstly, to understand the distribution of some measurements of the
-                trees and, then, to discover
-                possible correlations between them and the specific tree species. We will begin showing the distribution
-                of some measures (like height,
-                diameter, canopy size, and leaf area) on the whole dataset of trees via histrograms. Then, we will
-                discover the distribution of those
-                variables using boxplots about the top 5 tree species on the territory. After, we will skip to a
-                two-dimensional representation using scatterplot:
-                we will discover possible correlations between the selected measures for the trees and the kilograms of
-                CO&#8322; that they can absorbe during a year.
-                The data-points will be colored with respect to the corresponding top 6 tree species. After, we will
-                split this scatterplot in a small multiple scatterplot
-                where we can find six different plots, one for each of the top 6 classes. At the end, we can find an
-                interactive bubblechart in which we compare a measurement
-                of the tree with the CO&#8322; that it can absorbe, and with its canopy size.
+               
+            In the second part of the project , we want to analyze the situation in the developed country using <br>
+            similar and differents graphs respect to the previous part.<br>
+            The first map is equal to the previous one , because we want to visualize the worldwide situation. <br>
+            Then we want to see clearly which country is the best for life expectancy. <br> 
+            This part continues analyzing the relationship between the population of a country and its life expectancy. <br>
+            In the last part , it is possible to understand the time situation of each desired country. <br>
+
+            </p>
+            <ul>
+                <li>a <span class="font-bold">Choropleth Map </span>, using the life expectancy for each country;</li>
+                <li>a <span class="font-bold">Barplot </span>, using , as before , life expectancy for each country;</li>
+                <li>a <span class="font-bold">scatterplot</span>, which will use the life expectancy and the population;</li>
+                <li>a <span class="font-bold">Linechart </span>, using the life expectancy during 15 years.</li>
+            </ul>
+            <p>
             </p>
             <p>
-                All about these representations can be found <a href="assignment2.html">clicking here</a>!
+                All the information about developed countries can be found <a href="developed.html">clicking here</a>!
             </p>
         </div>
 
         <!-- THIRD ASSIGNMENT -->
         <div id="third-assign" class="section">
-            <h2>Third assignment: <span>Maps</span></h2>
+            <h2>Third Part: <span>Comparison between Developed and Developing countries</span></h2>
             <p>
-                In this third block of visual representations , we want to visualize the map of Trento divided by
-                neighborhoods , and extract some characteristics for each of them. The fields we want to compare and
-                visualize in real time are : Tree abundance , density (the amount of neighborhood space covered by
-                trees' canopy cover ) , oxygen production and the trees position.
+                In this third block of visual representations , we want to understand the time trend between developed and developing <br>
+                using multiple linechart. <br>
+                Then , we want to understand the distribution of some variables such as : Life Expectancy , Adult Mortality <br>
+                BMI (body mass index) ,  income composition of resources and schooling using boxplot and barplot<br>
+                The last graph of this part is the most particular, It is a Circular treemap that allows us to visualize <br>
+                a hierarchic organizaiton. Each node represents a country.
+
             </p>
             <ul>
-                <li>a <span class="font-bold">choropleth map </span>, using the abundance of trees in each neighborhood;
-                </li>
-                <li>a <span class="font-bold">choropleth map </span>, using the density ;</li>
-                <li>a <span class="font-bold">choropleth map </span>, using the oxygen production per tree;</li>
-                <li>a <span class="font-bold">dot density map </span>, for the visualization of tree's position.</li>
-                <li>a <span class="font-bold">dot density map </span>, for the visualization of tree's position divided
-                    by top six tree type.</li>
+                <li>a <span class="font-bold">Multiple Linechart </span>,used for comparing the trend of life expectancy of the two groups of countries ;</li>
+                <li>a <span class="font-bold">Boxplot </span>, using different variables for understanding better the differences ;</li>
+                <li>a <span class="font-bold">Barplot </span>, used for joining together the two groups  ;</li>
+                <li>a <span class="font-bold">Circular Treemap </span>, using life expectancy and population .</li>
+               
+                   
             </ul>
             <p>
-                All about the maps can be found <a href="assignment3.html">clicking here</a>!
+                All the information about the comparison can be found <a href="comparison.html">clicking here</a>!
             </p>
         </div>
 
-         <!-- FOURTH ASSIGNMENT -->
-         <div id="fourth-assign" class="section">
-            <h2>Fourth assignment: <span>Timelines</span></h2>
-            <p>
-                In this fourth block of visual representations , we want to visualize timelines. We are going to focus on maximum , minimum and mean temperature of Salorno (a city near Trento).
-                For example  in the line chart , on the X axis we have months of a year whereas on Y axis temperatures
-            </p>
-            <ul>
-                <li>a <span class="font-bold">Linechart </span>, Combination of two line chart and a scatterplot representing the min , max and avg temperature of 8 differents years;</li>
-                <li>a <span class="font-bold">Radarchart </span>, Different kind of visualization that represents min , max and avg temperature of 8 differents years  ;</li>
-                <li>a <span class="font-bold">Ridgeline chart</span>, Ridge lines that displays min and max daily temperature of every month in a year ;</li>
-                
-                   
-            </ul>
-            <p>
-                All about the maps can be found <a href="assignment4.html">clicking here</a>!
-            </p>
-        </div>
-        <!-- FIFTH ASSIGNMENT -->
-        <div id="fifth-assign" class="section">
-            <h2>Fifth assignment: <span>Flux</span></h2>
-            <p>
-                    In the last assignment , we represented a Sankey diagram. This diagram helps us to understand which kind of tree is economically beneficial.
-            </p>
-            <ul>
-                <li>a <span class="font-bold">Sankey Diagram </span>, This is a particular chart that takes as input Carbon Storage and it represents as output the top 10 species based on the Carbon Storage,
-                then it uses the output computed before as input for the second part of the diagram and the final output will be the total Euro saved by these tress</li>
-                
-                
-                   
-            </ul>
-            <p>
-                All about the Flux can be found <a href="assignment5.html">clicking here</a>!
-            </p>
-        </div>
+         
 
     </div> <!-- END OF MAIN CONTENT -->
 

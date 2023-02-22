@@ -1,4 +1,5 @@
-const id_ref_4 = "#timeline-developed"
+
+const id_ref_4 = "#timeline-developing"
 
 // Set the dimensions and margins of the graph
 const margin_4 = {top: 50, right: 20, bottom: 60, left: 210},
@@ -17,7 +18,7 @@ const svg_4 = d3.select(id_ref_4)
 
 
 
-d3.csv("../../data/developed/developed4.csv").then (function(data) {
+d3.csv("../../data/developing/developing4.csv").then (function(data) {
 
     // List of groups (here I have one group per column)
     const allGroup = new Set(data.map(d => d.Country))
@@ -46,7 +47,7 @@ d3.csv("../../data/developed/developed4.csv").then (function(data) {
 
     // Add Y axis
     const y = d3.scaleLinear()
-      .domain([70, d3.max(data, function(d) { return +d.Life_expectancy; })])
+      .domain([30, d3.max(data, function(d) { return +d.Life_expectancy; }) + 5])
       .range([ height_4, 0 ]);
     svg_4.append("g")
       .call(d3.axisLeft(y).ticks(15));
@@ -54,8 +55,8 @@ d3.csv("../../data/developed/developed4.csv").then (function(data) {
 
             // Add X axis label:
   svg_4.append("text")      // text label for the x axis
-  .attr("x", (width_3 / 2))
-  .attr("y", (height_3 - 10 +  margin_3.bottom))
+  .attr("x", (width_4 / 2))
+  .attr("y", (height_4 - 10 +  margin_4.bottom))
   .style("class", "h2")
   .style("font-size", "18px")
   .style("text-anchor", "middle")
@@ -65,8 +66,8 @@ d3.csv("../../data/developed/developed4.csv").then (function(data) {
 svg_4.append("text")
     .attr("text-anchor", "end")
     .attr("transform", "rotate(-90)")
-    .attr("y", -margin_3.left + 150)
-    .attr("x", -margin_3.top - 200)
+    .attr("y", -margin_4.left + 150)
+    .attr("x", -margin_4.top - 200)
     .text("Life Expectancy")
 
      //TOOLTIP
@@ -89,14 +90,14 @@ svg_4.append("text")
 .style("font-size", "18px")
 .attr("text-anchor", "middle")  
 .style("text-decoration", "underline")  
-.text("Timeline Life Expectancy of the Desired Developed Country");
+.text("Timeline Life Expectancy of the Desired Developing Country");
 
 
     // Initialize line with first group of the list
     const line = svg_4
       .append('g')
       .append("path")
-        .datum(data.filter(function(d){return d.Country == "Australia"}))
+        .datum(data.filter(function(d){return d.Country == "Afghanistan"}))
         .attr("d", d3.line()
           .x(function(d) { return x(d.Year) })
           .y(function(d) { return y(+d.Life_expectancy) })
@@ -108,7 +109,7 @@ svg_4.append("text")
          // Initialize dots with group a
     const dot = svg_4
     .selectAll('circle')
-    .data(data.filter(function(d){return d.Country == "Australia"}))
+    .data(data.filter(function(d){return d.Country == "Afghanistan"}))
     .join('circle')
       .attr("cx", d => x(+d.Year))
       .attr("cy", d => y(+d.Life_expectancy))
