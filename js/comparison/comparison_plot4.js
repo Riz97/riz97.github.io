@@ -85,6 +85,23 @@ d3.csv("../../data/comparison/comparison-4.csv").then( function(data) {
     .style("text-decoration", "underline")  
     .text("Countries by Status, Population and Life Expectancy");
 
+    svg_4.append("text")
+    .attr("x", ((width_4 - (margin_4.left - margin_4.right)) / 2) - 150)             
+    .attr("y", +660)
+    .style("class", "h2")
+    .style("font-size", "18px")
+    .attr("text-anchor", "bottom")  
+    .style("text-decoration", "underline")  
+    .text("Developing");
+
+    svg_4.append("text")
+    .attr("x", ((width_4 - (margin_4.left - margin_4.right)) / 2) + 250)             
+    .attr("y", +660)
+    .style("class", "h2")
+    .style("font-size", "18px")
+    .attr("text-anchor", "bottom")  
+    .style("text-decoration", "underline")  
+    .text("Developed");
   // Initialize the circle: all located at the center of the svg area
   var node = svg_4.append("g")
     .selectAll("circle")
