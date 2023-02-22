@@ -110,7 +110,7 @@ svg_3.append("text")      // text label for the y axis
     .style("class", "h2")
     .style("font-size", "16px")
     .attr("transform", "rotate(-90)")
-    .text("Life Exepctancy");
+    .text("Life Expectancy");
 
 // Animation
 svg_3.selectAll("rect")
