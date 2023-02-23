@@ -1,4 +1,4 @@
-const id_ref_3 = "#ridgeline"
+const id_ref_3 = "#barchart"
 
 // Set the dimensions and margins of the graph
 const margin_3 = {top: 50, right: 20, bottom: 60, left: 210},
@@ -91,7 +91,7 @@ svg_3.selectAll("mybar")
     .style("font-size", "18px")
     .attr("text-anchor", "middle")  
     .style("text-decoration", "underline")  
-    .text("Top 10 populated developing/developed countries");
+    .text("Life expectancy in the top 10 populated developing/developed countries");
 
 // X axis label
 svg_3.append("text")      // text label for the x axis

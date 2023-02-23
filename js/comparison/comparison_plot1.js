@@ -92,6 +92,15 @@ svg_1.append("text")      // text label for the x axis
     .style("font-size", "16px")
     .style("text-anchor", "middle")
     .text("Year");
+       // Title
+       svg_1.append("text")
+       .attr("x", ((width_1 - (margin_1.left - margin_1.right)) / 2))             
+       .attr("y", 0 - (margin_1.top / 3.5))
+       .style("class", "h2")
+       .style("font-size", "18px")
+       .attr("text-anchor", "middle")  
+       .style("text-decoration", "underline")  
+       .text("Life expectancy in years 2000-2015");
 
         svg_1.selectAll("path")
         .style("opacity" , 0.5)
