@@ -112,7 +112,8 @@ const tooltip = d3.select(id_ref_3)
         .style("fill", "#69b3a2")
         .style("fill", function (d) { return color(d.Country) } )
         .attr("stroke", "black")
-       .attr("opacity",0.9)
+        .style("stroke-width", 1)
+        .attr("opacity",0.7)
 
         svg_3.selectAll("circle")
 
@@ -122,7 +123,9 @@ const tooltip = d3.select(id_ref_3)
         d3.select(event.currentTarget)
             .transition("selected")
                 .duration(300)
-                .style("opacity", 1.0);
+                .style("opacity", 1.0)
+                .style("stroke-width", 2)
+                .attr("r", 12);
 
         tooltip.transition("appear-box")
             .duration(300)
@@ -143,7 +146,9 @@ const tooltip = d3.select(id_ref_3)
         d3.select(event.currentTarget)
            .transition("unselected")
                 .duration(300)
-                .style("opacity", 0.9);
+                .style("opacity", 0.7)
+                .style("stroke-width", 1)
+                .attr("r", 7);
 
         tooltip.transition("disappear-box")
             .duration(300)
@@ -159,7 +164,7 @@ const tooltip = d3.select(id_ref_3)
   
     svg_3.selectAll("circle")
       .transition()
-      .delay(function(d,i){return(i*300)})
+      .delay(function(d,i){return(i*25)})
       .duration(2000)
       .attr("cx", function (d) { return x(d.Life_expectancy); } )
       .attr("cy", function (d) { return y(d.Population); } )

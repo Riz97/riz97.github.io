@@ -135,7 +135,7 @@ function draw2() {
             .attr("transform", "translate(0,10)")
             .style("text-anchor", "center")
             .style("font-family", "Fira Sans, sans-serif")
-            .style("font-size", "12px");
+            .style("font-size", "10px");
 
     // Y axis max value
     y_max = (Math.ceil(max_data+(5/100*max_data))/5)*5
@@ -150,7 +150,7 @@ function draw2() {
         .selectAll("text")
             .style("text-anchor", "end")
             .style("font-family", "Fira Sans, sans-serif")
-            .style("font-size", "12px");
+            .style("font-size", "10px");
 
     // Show the main vertical line
     svg_2.selectAll("vertLines")
@@ -214,7 +214,7 @@ function draw2() {
         .attr("x", ((width_2 - (margin_2.left - margin_2.right)) / 2))             
         .attr("y", 0 - (margin_2.top / 2))
         .style("class", "h2")
-        .style("font-size", "12px")
+        .style("font-size", "10px")
         .attr("text-anchor", "middle")  
         .style("text-decoration", "underline")
         //.text(`Boxplot of height for the top-5 tree Status`);
@@ -225,7 +225,7 @@ function draw2() {
         .attr("x", (width_2 / 2))
         .attr("y", (height_2 + 50))
         .style("class", "h2")
-        .style("font-size", "12px")
+        .style("font-size", "10px")
         .style("text-anchor", "middle")
         .text("Status");
 
@@ -236,7 +236,7 @@ function draw2() {
         .attr("y", -50)
         .style("text-anchor", "middle")
         .style("class", "h2")
-        .style("font-size", "12px")
+        .style("font-size", "10px")
         .attr("transform", "rotate(-90)")
         .text(y_label_2[subgroups_2.indexOf(measureHeading_2)]);
 
