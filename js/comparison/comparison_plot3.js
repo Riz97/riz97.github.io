@@ -1,4 +1,4 @@
-const id_ref_3 = "#barchart"
+const id_ref_3 = "#ridgeline"
 
 // Set the dimensions and margins of the graph
 const margin_3 = {top: 50, right: 20, bottom: 60, left: 210},
