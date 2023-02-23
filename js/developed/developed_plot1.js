@@ -33,12 +33,12 @@ const projection = d3.geoMercator()
 // Data and color scale
 let data_1 = new Map()
 const colorScale_1 = d3.scaleThreshold()
-  .domain([73,75,77,79,81,83, 85])
-  .range(d3.schemeGreens[7]);
+.domain([73,75,78,80,82,85])
+.range(d3.schemeGreens[6]);
 
 // Add color legend
 shapeWidthLegend_1 = 100;
-const labels_1 = ["Developing",73,75,77,79,81,83,85];
+const labels_1 = ["Developing",73,75,78,80,82,85];
 const legend_1_size = shapeWidthLegend_1*labels_1.length;
 
 const legend_1 = d3.legendColor()
