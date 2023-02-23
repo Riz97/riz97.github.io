@@ -21,7 +21,7 @@ const svg = d3.select("#sankey")
 // format variables
 var formatNumber = d3.format(",.0f"), // zero decimal places
     format = function(d) { return formatNumber(d); },
-    color_5 = d3.scaleOrdinal(d3.schemeCategory10);
+    color_5 = d3.scaleOrdinal(d3.schemeTableau10);
   
 
 
