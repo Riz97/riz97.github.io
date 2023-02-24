@@ -117,10 +117,7 @@ function draw2() {
     // X axis label
     x_label = [...new Set(d3.map(data, d => d.Status))];
 
-    // Color respect to the subgroups (tree Status)
-    // var color = d3.scaleOrdinal()
-    //     .domain(x_label)
-    //     .range(["#ff595e", "#ffca3a", '#8ac926', '#1982c4', '#6a4c93']);
+    
     
     // Show the X scale
     var x = d3.scaleBand()
@@ -217,7 +214,7 @@ function draw2() {
         .style("font-size", "10px")
         .attr("text-anchor", "middle")  
         .style("text-decoration", "underline")
-        //.text(`Boxplot of height for the top-5 tree Status`);
+
         .text(`Boxplot of ${measureHeading_2.replace("_", " ").toLowerCase()} depending on the Status`);
 
     // X axis label
