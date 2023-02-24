@@ -10,7 +10,7 @@ const margin_1 = {top: 20, right: 120, bottom: 70, left: 45},
 // Scale factor on both dimensions (width and height)
 const scaleFactor_1 = 1;
 
-// Append the svg_5 object to the page
+// Append the svg object to the page
 const svg_1 = d3.select(id_ref_1)
     .append("svg")
     //.attr("width", width_5 + margin_5.left + margin_5.right)
@@ -46,7 +46,7 @@ d3.csv("../../data/comparison/comparison-1_1.csv").then( function(data) {
   // color palette
   const color = d3.scaleOrdinal()
   .domain(["Austria","Bangladesh","Bulgaria","Brazil","Ethiopia","Germany","India","Indonesia","Italy","Netherlands","Nigeria","Pakistan","Philippines","Poland","Romania","Russian Federation","Sweden", "Switzerland","Spain", "Turkey","AVG Developed","AVG Developing"])
-  .range(["#1982c4" ,"#ff595e", "#1982c4","#ff595e", "#ff595e", "#1982c4","#ff595e", "#ff595e", "#1982c4","#1982c4", "#ff595e", "#ff595e","#ff595e", "#1982c4", "#1982c4","#ff595e", "#1982c4", "#1982c4","#1982c4", "#ff595e","#79fff3","#ff04b6"])
+  .range(["#1982c4" ,"#ff595e", "#1982c4","#ff595e", "#ff595e", "#1982c4","#ff595e", "#ff595e", "#1982c4","#1982c4", "#ff595e", "#ff595e","#ff595e", "#1982c4", "#1982c4","#ff595e", "#1982c4", "#1982c4","#1982c4", "#ff595e","#0014a1","#ff8200"])
 
 
     const tooltip = d3.select(id_ref_1)
@@ -66,7 +66,7 @@ d3.csv("../../data/comparison/comparison-1_1.csv").then( function(data) {
       .join("path")
         .attr("fill", "none")
         .attr("stroke", color)
-        .attr("stroke-width", 5)
+        .attr("stroke-width", 4)
         .attr("d", function(d){
           return d3.line()
             .x(function(d) { return x(d.Year); })
@@ -138,15 +138,15 @@ svg_1.append("text")      // text label for the x axis
                     .style("opacity", 0);
             });
   
-    // Handmade legend  "#1982c4", "#ff595e","#79fff3","#ff04b6"
+    // Handmade legend 
 svg_1.append("circle").attr("cx",700).attr("cy",500).attr("r", 6).style("fill", "#1982c4")
 svg_1.append("circle").attr("cx",700).attr("cy",530).attr("r", 6).style("fill", "#ff595e")
-svg_1.append("circle").attr("cx",700).attr("cy",560).attr("r", 6).style("fill", "#79fff3")
-svg_1.append("circle").attr("cx",700).attr("cy",590).attr("r", 6).style("fill", "#ff04b6")
+svg_1.append("circle").attr("cx",700).attr("cy",560).attr("r", 6).style("fill", "#0014a1")
+svg_1.append("circle").attr("cx",700).attr("cy",590).attr("r", 6).style("fill", "#ff8200")
 svg_1.append("text").attr("x", 720).attr("y", 500).text("Developed").style("font-size", "15px").attr("alignment-baseline","middle").style("fill", "#1982c4")
 svg_1.append("text").attr("x", 720).attr("y", 530).text("Developing").style("font-size", "15px").attr("alignment-baseline","middle").style("fill", "#ff595e")
-svg_1.append("text").attr("x", 720).attr("y", 560).text("AVG Developed").style("font-size", "15px").attr("alignment-baseline","middle").style("fill", "#79fff3")
-svg_1.append("text").attr("x", 720).attr("y", 590).text("AVG Developing").style("font-size", "15px").attr("alignment-baseline","middle").style("fill", "#ff04b6")
+svg_1.append("text").attr("x", 720).attr("y", 560).text("AVG Developed").style("font-size", "15px").attr("alignment-baseline","middle").style("fill", "#0014a1")
+svg_1.append("text").attr("x", 720).attr("y", 590).text("AVG Developing").style("font-size", "15px").attr("alignment-baseline","middle").style("fill", "#ff8200")
 
     
 })
