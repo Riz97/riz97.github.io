@@ -7,7 +7,7 @@
     {"node":4,"name":"Colombia"},
     {"node":5,"name":"Kenya"},
     {"node":6,"name":"Adult Deaths"},
-    {"node":7,"name":"Infant HIV Deaths"},
+    {"node":7,"name":"Infants Deaths"},
     {"node":8,"name":"Other"}
     ],
 
@@ -22,14 +22,14 @@
     {"source":3,"target":6,"value":1252344.0},
     {"source":4,"target":6,"value":6896704.0},
     {"source":5,"target":6,"value":11761828.0},
-    {"source":1,"target":7,"value":77448},
-    {"source":2,"target":7,"value":670372},
-    {"source":3,"target":7,"value":7827},
-    {"source":4,"target":7,"value":4822},
-    {"source":5,"target":7,"value":132261},
-    {"source":1,"target":8,"value":212725580},
-    {"source":2,"target":8,"value":118855220},
-    {"source":3,"target":8,"value":77019127},
-    {"source":4,"target":8,"value":41331992},
-    {"source":5,"target":8,"value":35474428}
+    {"source":1,"target":7,"value":35120580},
+    {"source":2,"target":7,"value":87834570},
+    {"source":3,"target":7,"value":1174189},
+    {"source":4,"target":7,"value":1818521},
+    {"source":5,"target":7,"value":2557899},
+    {"source":1,"target":8,"value":177605001},
+    {"source":2,"target":8,"value":31020654},
+    {"source":3,"target":8,"value":75844939},
+    {"source":4,"target":8,"value":39513472},
+    {"source":5,"target":8,"value":32916532}
     ]}
