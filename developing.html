@@ -66,19 +66,20 @@
                 
                 <!-- SECOND PLOT: barplot -->
                 <div class="subsection">
-                    <h3>Grouped barplot of diseases per most populated states </h3>
+                    <h3>Grouped barplot of immunization coverage  per most populated states </h3>
                     <p>
-                        Considering the same measurements saw before, now we visualize the boxplots of the top 5 tree species.
-                        Thanks to boxplots, we can display some descriptive statistical informations like the median, the maximimum,
-                        the minimum, and the quartiles of each distribution. Potentials outliers are plotted as individual points.
-                        For example, looking at the height, we can instantly see that <span class="font-italic">Platanus x hispanica</span>
-                        species is usually higher with respect to the other species, and more spread, lookind at the IQR.
-                        <br>It is possible to visualize the Q1, Q3, mean, and median values of each box overing it with the mouse.
+                    
+                        In this plot we want to display the immunization coverage for ten of the most populated "Developing" countries , using a grouped barplot <br>
+                        For this experiment , the Kaggle dataset gave us the data for the immunzation coverage of 3 different diseases : HepatisB (Red) , Polio (Blue) and Diphteria (Green). <br> 
+                        In the Y axis there is the percentage of immunization among 1 year olds and in the x axis the countries. <br>
+                        The 3 different colors bars represent the 3 different type of disease. <br>
+                        Having a good coverage immunization for the majority of the diseases it is very important for increasing the life expectancy of a country and for aspiring to become  a "Developed" state . <br>
+                        We can see that few countries have a high percentage of immunization for these disease. <br>
+                        Under this point of view only Turkey is doing a good job.<br>
+                        You can use the tooltip for visualizing the amount of population , the precise percentage of immunization 
+                        
                     </p>
-                    <p>
-                        Select the measurement you want to visualize in the boxplot: 
-                        <select id="selection-boxplot-measure" class="selectionBox" name="Measure" onchange="draw2(data2)"></select>
-                    </p>
+
                     <div id="developing_2" class="chart"></div>
                 </div>
 
@@ -87,13 +88,19 @@
                 <hr>
                 <!-- THIRD PLOT: sankey -->
                 <div class="subsection">
-                    <h3>Sankey plot of diseases distribution</h3>
+                    <h3>Sankey plot of deaths divided per ages</h3>
                     <p>
-                        For the top 6 most populated tree species, we display a scatterplot having on the x axis the size of trees, like
-                        the height, diameter, canopy size, and leaf area, and and on the y axis the kilograms of CO&#8322; absorbed in a year.
-                        We want to discover possible correlations between these variables.
-                        <br>Moving the mouse over the single data-point, we can visualize the exact value of the selected measure and the amount of CO&#8322;
-                        absorbed by the tree, highlighting all the trees of this species.
+                       In the first part of our analysis of the "Developing" countries  , we are going to visualize a Sankey Diagram. <br>
+                       In the first block we have the total amount of population of the top five "Developing" countries considering the year 2015. <br>
+                       In the middle of the graph there all the the countries we are taking into account . Bigger block means bigger amount of population.<br>
+                       The last part of the visualzion is the most important one. <br> 
+                       We have three different blocks : Adult Deaths , Infant Deaths and Others. <br>
+                       Adult Deaths is the  probability of dying between 15 and 60 years   , Infants Deaths is the number of infant people , Others are other ages intervals probably of  elderly people and teenagers (it would have been more interesting if the dataset provided more columns) <br>
+                       We can see , for example , that in Nigeria the number of Infant deaths is greater than the Adult deaths becuase the life condition are very difficult to handle when you are youger. <br> 
+                    Tooltip is provided for see clearly all the values.
+                    It is useful to say some words about it. If the life expectancy of a country is quite high , so the number of Infant Deaths should be low. This happens , for example , with Turkey which has a 
+                    not so low life expectancy and the number of Infant Deaths is very low.
+
                     </p>
                     
                     <div id="sankey" class="chart"></div>
@@ -105,10 +112,10 @@
                     <h3>Timeline from 2000 to 2015 </h3>
                      
                         <p>
-                            In the last part of this analysis , we would like to check the trend of life expectancy during the years starting from 2000 to 2015. <br>
+                        In the last part of this analysis , we would like to check the trend of life expectancy during the years starting from 2000 to 2015. <br>
                         With this kind of visualization , we have the possibility to analyze precisely the trend of each country thanks to the dropdown menu and thanks to the tooltip that will display the life expectancy at the selected year. <br>
                         It could be useful analyze some of these countries.<br>
-                        The first to see is Haiti. This island has been a quite stable trend for all the years considered but with an exception. During the 2010 , the inhabitants of Haiti have been hit by a terrible earthquake
+                        The first to analyze deeper is  Haiti. This island has been a quite stable trend for all the years considered but with an exception. During the 2010 , the inhabitants of Haiti have been hit by a terrible earthquake
                         , for this reason the life expectancy value has dropped drammatically in that year (<a href="https://en.wikipedia.org/wiki/2010_Haiti_earthquake">click here</a>, if you want more information about this event). <br>
                          Another country to analyze could be Rwanda. Rwanda is a country located in Africa and in 2000 its life expectancy was 48.3 , not a a so high value. But, in the next years , life expectancy has been increased noticeably , reaching 68.0 years old.
                          An article in the website of United Nations explain this situation and what is going on in Africa (you can find it <a href="https://en.wikipedia.org/wiki/2010_Haiti_earthquake"> here</a>). <br>
