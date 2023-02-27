@@ -43,14 +43,14 @@
 
         
         <div id="comparison" class="section">
-
+<center>
             <h2>Comparison between Developing and Developed Countries</h2>
 
             <!-- FIRST PLOT: Linechart -->
             <div class="subsection">
                 <h3>Timeline of life expectancy grouping by type of country</h3>
 
-                <p> The chart displays the life expectancy data from the years 2000 to 2015, 
+                <p style = "max-width: 75ch";> The chart displays the life expectancy data from the years 2000 to 2015, 
                     with the 10 most populous countries selected for each category (developed and developing). <br>
                     It is evident from the chart that developed countries have consistently enjoyed higher life expectancies
                      than developing countries. It is noteworthy that the trend 
@@ -58,7 +58,7 @@
                     The average life expectancy for each category is shown with a different color.<br>
                     With the tooltip we can read the name of the country, highlighting the corrisponding line. 
                     
-                </p>
+                </p></center>
 
 
 
@@ -67,9 +67,10 @@
             <hr>
 
             <!-- SECOND PLOT - boxplot -->
-            <div class="subsection">
+          <div class="subsection">
+                <center>
                 <h3>Boxplot comparison </h3>
-                <p>  Following our analysis of the life expectancy disparity between developed and developing
+                <p style = "max-width: 75ch";>  Following our analysis of the life expectancy disparity between developed and developing
                      countries, we examined other variables using boxplots to display descriptive statistical
                       information such as the median, maximum, minimum, and quartiles of each distribution. 
                       Outliers are plotted as individual points.<br>
@@ -82,7 +83,8 @@
                 <p>
                     Select the measurement you want to visualize in the boxplot: 
                     <select id="selection-boxplot-measure" class="selectionBox" name="Measure" onchange="draw2(data2)"></select>
-                </p>
+                    
+                </p></center>
                 <div id="boxplot" class="chart"></div>
             </div>
 
@@ -90,9 +92,10 @@
 
             <!-- THIRD PLOT: barchart -->
             <div class="subsection">
+                <center>
                 <h3>Barchart of life expectancy in the last year (2015)</h3>
 
-                <p>
+                <p style = "max-width: 75ch";>
                 
                     Our analysis focuses on the life expectancy in the year 2015, with the 10 most populous 
                     countries selected for each category (developed and developing). With the exception of 
@@ -105,7 +108,7 @@
 
 
 
-                </p>
+                </p></center>
                 
                 
                 <div id="barchart" class="chart"></div>
@@ -116,9 +119,10 @@
 
             <!-- FOURTH PLOT: Ridgeline -->
             <div class="subsection">
+                <center>
                 <h3>Circular packing comparison</h3>
 
-                <p>
+                <p style = "max-width: 75ch";>
                     
                     Circular Packing allows to visualize a hierarchic organization. In this plot we have a one level of hierarchy <br>
                     We can use this kind of plot to visualize the distribution of the world population. <br>
@@ -131,7 +135,7 @@
 
                 
 
-                </p>
+                </p></center>
                 
                 <div id="circ"></div>
 

@@ -53,9 +53,10 @@
 
             <!-- FIRST PLOT: CHOROPLETH MAP  -->
             <div class="subsection">
+                <center>
                 <h3>Choropleth map - Developed countries</h3>
               
-                    <p>
+                    <p style = "max-width: 75ch";>
                         In this first graph  it is possible to visualize the entire maps of the world divided per country.<br>
                         In this  choropleth map we want to display the worldwide situation of life expectancy value in all the developed countries during the year 2015.<br>
                         Thanks to a green color map (light green to dark green) we can understand in which country we have the highest value of life expectancy, the lightes color of green is used for labeled the "Developing" countries.<br> 
@@ -63,7 +64,7 @@
                         We can see that the greatest amount of developed countries are centered in Europe , no country in Africa is considered "Developed" and only Japan in Asia.<br>
                     </p>
                    
-                    
+                    </center>
                     
             </div>
             <div id="choropleth-map-developed" class="chart"></div>
@@ -71,15 +72,16 @@
 
             <!-- SECOND PLOT Barplot -->
             <div class="subsection">
+                <center>
                 <h3>Barplot of Life Expectancy in every Developed country</h3>
                  
-                    <p>
+                <p style = "max-width: 75ch";>
                         In the next part of the analysis of the "Developed"countries  , we want to see which country has the greatest value of life expectancy.<br>
                         We will do this using a barplot that it  is used to display the relationship between a numerical(Life expectancy) and a categorical variable (Developed Country).<br>
                         We can , easily , see that the best country for life expectancy is Slovenia and the worst is Lithuania considering the year 2015.<br>
                         With the tooltip you can visualize the exact value of life expectancy per country.
                     </p>
-                   
+                   </center>
                     
                     
             </div>
@@ -88,9 +90,10 @@
 
             <!-- THIRD PLOT: Scatter plot -->
             <div class="subsection">
+                <center>
                 <h3>Scatter plot of Population and Life Expectancy</h3>
                  
-                    <p>
+                <p style = "max-width: 75ch";>
                         In this third plot of the analysis of the "Developed" countries ,  we want to show the relationship between the population and the life expectancy of each "Developed" country. <br>
                         In the X  axis there is the Life Expectancy , whereas in the Y axis the Population. <br> Every single dot represents a country and every country has a different color from the other, tooltip with all the information is provided <br>
                         It could be interesting analzying a little bit this situation. <br>
@@ -99,7 +102,7 @@
                         It is also interesting to notice that most of the best countries are islands such as : Japan , Singapore , Cyprus , Iceland , Australia. <br> 
                         On the other hand , the lowest life expectancy is centered in East Europe with countries such as : Lithuania , Bulgaria , Latvia , Hungary and Romania <br>
                     </p>
-                   
+                   </center>
                 <div id="scatterplot-developed" class="chart"></div>
                     
                 </div>
@@ -109,9 +112,10 @@
 
             <!-- THIRD PLOT: Timeline -->
             <div class="subsection">
+                <center>
                 <h3>Timeline from 2000 to 2015 </h3>
                  
-                    <p>
+                <p style = "max-width: 75ch";>
                         In the last part of this analysis , we would like to check the trend of life expectancy during the years starting from 2000 to 2015. <br>
                         With this kind of visualization , we have the possibility to analyze precisely the trend of each country thanks to the dropdown menu and thanks to the tooltip that will display the life expectancy at the selected year. <br>
                         It could be useful analyze two different kinds of trend.<br>
@@ -125,6 +129,7 @@
                    Select the "Developed" country you want to visualize in the timeline: 
                    
                    <select id="selectButton"class="selectionBox"></select>
+                   </center>
                                      
                 <div id="timeline-developed" ></div>
                 
