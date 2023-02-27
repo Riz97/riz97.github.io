@@ -49,16 +49,18 @@
             <h2>Life Expectancy in Developing states <span>Maps</span></h2>
 
             <!-- FIRST PLOT: CHOROPLETH MAP  -->
-            <div class="subsection">
+            <div class="subsection"> 
+                <center>
                 <h3>Choropleth map - Life Expectancy</h3>
               
-                    <p>
+               
+                <p style = "max-width: 75ch";>
                         In this first graph  it is possible to visualize the entire maps of the world divided per country.<br>
                         In the choropleth map we want to display the worldwide situation of life expectancy value in all the "developing" countries during the year 2015.<br>
                         Thanks to a blue color map (light blue to dark blue) we can understand in which country we have the highest value of life expectancy, the lightest color of blue is used for labeled the "Developed" countries.<br> 
                         Trough the tooltip we can clearly visualize all the life expectancy countries situation.<br>
                         We can see that the greatest amount of developing countries are centered in Africa (in this case we can clearly see , especially in center Africa , that le life expectancy is low) , South America and Asia.<br>
-                    </p>                    
+                    </p>   </center>                 
                     
             </div>
             <div id="developing_1" class="chart"></div>
@@ -66,8 +68,9 @@
                 
                 <!-- SECOND PLOT: barplot -->
                 <div class="subsection">
+                    <center>
                     <h3>Grouped barplot of immunization coverage  per most populated states </h3>
-                    <p>
+                    <p style = "max-width: 75ch";>
                     
                         In this plot we want to display the immunization coverage for ten of the most populated "Developing" countries , using a grouped barplot <br>
                         For this experiment , the Kaggle dataset gave us the data for the immunzation coverage of 3 different diseases : HepatisB (Red) , Polio (Blue) and Diphteria (Green). <br> 
@@ -78,7 +81,7 @@
                         Under this point of view only Turkey is doing a good job.<br>
                         You can use the tooltip for visualizing the amount of population , the precise percentage of immunization 
                         
-                    </p>
+                    </p></center>
 
                     <div id="developing_2" class="chart"></div>
                 </div>
@@ -88,8 +91,9 @@
                 <hr>
                 <!-- THIRD PLOT: sankey -->
                 <div class="subsection">
+                    <center>
                     <h3>Sankey plot of deaths divided per ages</h3>
-                    <p>
+                    <p style = "max-width: 75ch";>
                        In the first part of our analysis of the "Developing" countries  , we are going to visualize a Sankey Diagram. <br>
                        In the first block we have the total amount of population of the top five "Developing" countries considering the year 2015. <br>
                        In the middle of the graph there all the the countries we are taking into account . Bigger block means bigger amount of population.<br>
@@ -101,7 +105,7 @@
                     It is useful to say some words about it. If the life expectancy of a country is quite high , so the number of Infant Deaths should be low. This happens , for example , with Turkey which has a 
                     not so low life expectancy and the number of Infant Deaths is very low.
 
-                    </p>
+                    </p></center>
                     
                     <div id="sankey" class="chart"></div>
                 </div>
@@ -109,9 +113,10 @@
                 <hr>
 
                 <div class="subsection">
+                    <center>
                     <h3>Timeline from 2000 to 2015 </h3>
                      
-                        <p>
+                    <p style = "max-width: 75ch";>
                         In the last part of this analysis , we would like to check the trend of life expectancy during the years starting from 2000 to 2015. <br>
                         With this kind of visualization , we have the possibility to analyze precisely the trend of each country thanks to the dropdown menu and thanks to the tooltip that will display the life expectancy at the selected year. <br>
                         It could be useful analyze some of these countries.<br>
@@ -125,7 +130,7 @@
                         Select the "Developing" country you want to visualize in the timeline:
                        
                        <select id="selectButton"class="selectionBox"></select>
-                                         
+                            </center>             
                     <div id="timeline-developing" ></div>
                     
                     </div>
